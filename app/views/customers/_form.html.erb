@@ -19,7 +19,9 @@
           <div class="input-field col s12 m4 l8">
             <i class="material-icons prefix">account_circle</i>
             <%= f.text_field :name %>
-            <label for="icon_prefix"><%= :Name %></label>
+            <% if params[:action] == 'new' %>
+              <label for="icon_prefix"><%= :Name %></label>
+            <% end %>  
           </div>
           <div class="col s12 m4 l2"><p></p></div>
         </div>
@@ -29,7 +31,9 @@
           <div class="input-field col s12 m4 l8">
             <i class="material-icons prefix">email</i>
             <%= f.text_field :email %>
-            <label for="icon_prefix"><%= :Email %></label>
+            <% if params[:action] == 'new' %>
+              <label for="icon_prefix"><%= :Email %></label>
+            <% end %>  
           </div>
           <div class="col s12 m4 l2"><p></p></div>
         </div>
@@ -39,7 +43,9 @@
           <div class="input-field col s12 m4 l8">
             <i class="material-icons prefix">phone</i>
             <%= f.text_field :phone %>
-            <label for="icon_prefix"><%= :Phone %></label>
+            <% if params[:action] == 'new' %>
+              <label for="icon_prefix"><%= :Phone %></label>
+            <% end %>  
           </div>
           <div class="col s12 m4 l2"><p></p></div>
         </div>
