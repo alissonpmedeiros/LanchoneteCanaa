@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
+  
+
   <title>LanchoneteCanaa</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
@@ -9,16 +11,25 @@
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body>
-  
+   <p class="notice"><%= notice %></p>
+   <p class="alert"><%= alert %></p>
    <nav>
     <div class="nav-wrapper">
       <a href="<%= root_path %>" class="brand-logo">Início</a>
 
       <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
       <ul class="right hide-on-med-and-down">
-        <li><a href="<%= customers_path %>"><i class="material-icons">contacts</i></a></li>
-        <li><a href="<%= accounts_path %>"><i class="material-icons">payment</i></a></li>
-        <li><a href="#"><i class="material-icons">power_settings_new</i></a></li>
+
+        <% if user_signed_in? %>      
+          <li><a href="<%= customers_path %>"><i class="material-icons">contacts</i></a></li>
+          <li><a href="<%= accounts_path %>"><i class="material-icons">payment</i></a></li>
+          <li><a href="#"><i class="material-icons">dashboard</i></a></li>
+          <li><a href="<%= destroy_user_session_path %>"><i class="material-icons">power_settings_new</i></a></li>
+        <% else %>
+          <li><a href="<%= new_user_session_path %>"><i class="material-icons">perm_identity</i></a></li>
+          <li><a href="<%= new_user_registration_path %>"><i class="material-icons">assignment_ind</i></a></li>
+
+        <% end %>
       </ul>
       <ul class="side-nav" id="mobile-demo">
         <li><a href="<%= customers_path %>"><i class="material-icons">contacts</i></a></li>
@@ -39,6 +50,6 @@
   <script>
   	$(".button-collapse").sideNav();
   </script>
-
+  
 </body>
 </html>

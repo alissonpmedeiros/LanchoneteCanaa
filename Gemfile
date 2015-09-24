@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+#Devise
+gem 'devise'
 #Materialize
 gem 'materialize-sass'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
