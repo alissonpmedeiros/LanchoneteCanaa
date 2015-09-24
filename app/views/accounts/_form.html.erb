@@ -27,10 +27,12 @@
     <%= f.label :status %><br>
     <%= f.number_field :status %>
   </div>
-  <div class="field">
+  <div class="row">
     <%= f.label :customer_id %><br>
-    <%= f.text_field :customer_id %>
+    <%= f.collection_select(:customer_id, @customers, :id, :name, { prompt: "Choose a Customer" }, class: "browser-default") %>   
   </div>
+  
+
   <div class="actions">
     <%= f.submit %>
   </div>
