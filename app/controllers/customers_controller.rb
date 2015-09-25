@@ -5,6 +5,7 @@ class CustomersController < ApplicationController
   # GET /customers.json
   def index
     @customers = Customer.all
+    #@customers = Customer.all.includes(:accounts)
   end
 
   # GET /customers/1

@@ -2,30 +2,30 @@
 
 <h1>Listing Customers</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Email</th>
-      <th>Phone</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
 
-  <tbody>
-    <% @customers.each do |customer| %>
-      <tr>
-        <td><%= customer.name %></td>
-        <td><%= customer.email %></td>
-        <td><%= customer.phone %></td>
-        <td><%= link_to 'Show', customer %></td>
-        <td><%= link_to 'Edit', edit_customer_path(customer) %></td>
-        <td><%= link_to 'Destroy', customer, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
 
+
+<ul class="collapsible" data-collapsible="accordion">
+  <% @customers.each do |customer| %>
+    <li>
+      <div class="collapsible-header">
+        <div class="col s4">
+          <i class="material-icons">person_pin</i>
+            <%= link_to customer.name, customer %>
+        </div>
+        <div class="col s4">
+          <i class="material-icons">email</i>
+            <%= link_to customer.email, customer %>
+        </div>
+        <div class="col s4">
+          <i class="material-icons">phone</i>
+            <%= link_to customer.phone, customer %>
+        </div>
+      </div>
+    </li>
+  <% end %>
+</ul>
 <br>
 
-<%= link_to 'New Customer', new_customer_path %>
+
+<a href="<%= new_customer_path %>" class="btn waves-effect waves-light" name="action">New Customer</a>

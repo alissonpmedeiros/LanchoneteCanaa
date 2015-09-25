@@ -20,7 +20,7 @@
             <i class="material-icons prefix">account_circle</i>
             <%= f.text_field :name %>
             <% if params[:action] == 'new' %>
-              <label for="icon_prefix"><%= :Name %></label>
+              <label for="icon_prefix"><%= :name %></label>
             <% end %>  
           </div>
           <div class="col s12 m4 l2"><p></p></div>
@@ -32,7 +32,7 @@
             <i class="material-icons prefix">email</i>
             <%= f.text_field :email %>
             <% if params[:action] == 'new' %>
-              <label for="icon_prefix"><%= :Email %></label>
+              <label for="icon_prefix"><%= :email %></label>
             <% end %>  
           </div>
           <div class="col s12 m4 l2"><p></p></div>
@@ -44,23 +44,24 @@
             <i class="material-icons prefix">phone</i>
             <%= f.text_field :phone %>
             <% if params[:action] == 'new' %>
-              <label for="icon_prefix"><%= :Phone %></label>
+              <label for="icon_prefix"><%= :phone %></label>
             <% end %>  
           </div>
           <div class="col s12 m4 l2"><p></p></div>
         </div>
 
-        <div class="row">
+        
           <div class="col s12 m4 l2"><p></p></div>
-          <div class="input-field col s12 m4 l8">
-            <div class="actions">
-              <%= f.submit %>
-            </div>
+          <div class="col s12 m4 l8">
+            <button class="btn waves-effect waves-light" type="submit" name="action">
+              Submit
+            </button>
           </div>
           <div class="col s12 m4 l2"><p></p></div>
-        </div>
+       
       </form>
     </div>
   </div>
         
 <% end %>
+
