@@ -16,6 +16,9 @@ class AccountsController < ApplicationController
   # GET /accounts/new
   def new
     @account = Account.new
+    if params[:customer]
+      @account.customer = Customer.find(params[:customer])
+    end
   end
 
   # GET /accounts/1/edit

@@ -17,9 +17,15 @@
           <i class="material-icons">email</i>
             <%= link_to customer.email, customer %>
         </div>
-        <div class="col s4">
+        <div class="col s3">
           <i class="material-icons">phone</i>
             <%= link_to customer.phone, customer %>
+        </div>
+        <div class="col s1">
+          <%= link_to controller: "accounts", action: "new", customer: customer do %>
+            <i class="material-icons">payment</i>
+          <%end%>
+          
         </div>
       </div>
     </li>

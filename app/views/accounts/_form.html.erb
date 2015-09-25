@@ -28,8 +28,10 @@
     <%= f.number_field :status %>
   </div>
   <div class="row">
-    <%= f.label :customer_id %><br>
-    <%= f.collection_select(:customer_id, @customers, :id, :name, { prompt: "Choose a Customer" }, class: "browser-default") %>   
+    <% unless @account.customer %>
+      <%= f.label :customer_id %><br>
+      <%= f.collection_select(:customer_id, @customers, :id, :name, { prompt: "Choose a Customer" }, class: "browser-default") %>   
+    <% end %>
   </div>
   
 
