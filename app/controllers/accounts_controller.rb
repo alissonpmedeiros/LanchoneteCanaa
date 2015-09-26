@@ -5,7 +5,7 @@ class AccountsController < ApplicationController
   # GET /accounts
   # GET /accounts.json
   def index
-    @accounts = Account.all
+    @accounts = Account.all.order(created_at: :desc)
   end
 
   # GET /accounts/1
