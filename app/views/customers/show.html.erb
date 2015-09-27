@@ -16,40 +16,52 @@
 	  </div>
 	</div>
  </div> 
+  
+  <div class="z-depth-3">
+    <h4 class="text-align: center">Accounts</h4>
+    <ul class="collapsible" data-collapsible="accordion">
+      <% @customer.accounts.order(created_at: :desc).each do |account| %>
+        <li>
+          <div class="collapsible-header">
+            <div class="col s4">
+              <i class="material-icons">payment</i>
+                <%= account.price %>
+            </div>
+            <div class="col s4">
+              <i class="material-icons">query_builder</i>
+                <%= account.created_at %>
+            </div>
+            <div class="col s3">
+              <i class="material-icons">settings_ethernet</i>
+                <% if account.status? %>
+                  Pago
+                <% else %>
+                  Pendente
+                <%end%>
+            </div>
+            <div class="right">
+              <%= link_to account, method: :delete, data: { confirm: 'Are you sure?' } do %>
+                <i class="material-icons">delete</i>
+              <%end%> 
+              <%= link_to edit_account_path(account) do %>
+                <i class="material-icons">view_headline</i>
+              <%end%>
+            </div>
+          </div>
+          <div class="collapsible-body">
+              <p>
+                <%= account.salesman %> <br>
+                <%= account.description %>
+              </p>
+            </div>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+
 <%end%> 
 
-<div class="z-depth-3">
-<h4 class="text-align: center">Accounts</h4>
-<ul class="collapsible" data-collapsible="accordion">
-  <% @customer.accounts.order(created_at: :desc).each do |account| %>
-    <li>
-      <div class="collapsible-header">
-        <div class="col s4">
-          <i class="material-icons">payment</i>
-            <%= account.price %>
-        </div>
-        <div class="col s4">
-          <i class="material-icons">query_builder</i>
-            <%= account.created_at %>
-        </div>
-        <div class="col s3">
-          <i class="material-icons">settings_ethernet</i>
-            <%= account.status %>
-        </div>
-        <div class="right">
-        	<%= link_to account, method: :delete, data: { confirm: 'Are you sure?' } do %>
-        		<i class="material-icons">delete</i>
-        	<%end%>	
-          <%= link_to edit_account_path(account) do %>
-            <i class="material-icons">view_headline</i>
-          <%end%>
-        </div>
-        
-      </div>
-    </li>
-  <% end %>
-</ul>
-</div>
+
 
 
 
