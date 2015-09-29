@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Salesman:</strong>
+  <%= @cash_payment.salesman %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @cash_payment.price %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @cash_payment.description %>
+</p>
+
+<%= link_to 'Edit', edit_cash_payment_path(@cash_payment) %> |
+<%= link_to 'Back', cash_payments_path %>

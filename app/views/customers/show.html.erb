@@ -33,11 +33,8 @@
             </div>
             <div class="col s3">
               <i class="material-icons">settings_ethernet</i>
-                <% if account.status? %>
-                  Pago
-                <% else %>
-                  Pendente
-                <%end%>
+                <%= status(account.status) %>
+                  
             </div>
             <div class="right">
               <%= link_to account, method: :delete, data: { confirm: 'Are you sure?' } do %>

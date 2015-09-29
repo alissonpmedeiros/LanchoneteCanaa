@@ -21,12 +21,23 @@
       <ul class="right hide-on-med-and-down">
 
         <% if user_signed_in? %>      
-          <li><a href="<%= customers_path %>"><i class="material-icons">contacts</i></a></li>
-          <li><a href="<%= new_account_path %>"><i class="material-icons">add</i></a></li>
-          <li><a href="#"><i class="material-icons">dashboard</i></a></li>
+          <li><a href="<%= customers_path %>">Contacts</a></li>
+
+          <li><a href="<%= accounts_path %>">Accounts</a></li>
+          
+          <li><a href="<%= new_account_path %>">New Account</a></li>
+
+          <li><a href="<%= cash_payments_path %>">Cash Payments</a></li>
+
+          <li><a href="<%= new_cash_payment_path %>">New Payment</a></li>
+
+          <li><a href="#">Dashboard</a></li>
+
           <li><a data-method="delete" href="<%= destroy_user_session_path %>"><i class="material-icons">power_settings_new</i></a></li>
+
         <% else %>
           <li><a href="<%= new_user_session_path %>"><i class="material-icons">perm_identity</i></a></li>
+
           <li><a href="<%= new_user_registration_path %>"><i class="material-icons">library_add</i></a></li>
 
         <% end %>
