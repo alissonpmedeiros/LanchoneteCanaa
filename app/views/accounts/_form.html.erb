@@ -49,18 +49,36 @@
           </div>
           <div class="col s12 m4 l2"><p></p></div>
         </div>
+
+        <%if params[:action] == 'edit'%>
+          <div class="row">
+            <div class="col s12 m4 l2"><p></p></div>
+            <div class="input-field col s12 m4 l1">
+              <i class="material-icons prefix">payment</i>
+            </div>
+            <div class="input-field col s12 m2 l5">
+              <%= f.select(:status, options_for_select([["Pago", "true"], ["Pendente", "false"]], @account.status), {include_blank: false}, class: "browser-default") %>
+            </div>
+            <div class="col s12 m4 l2"><p></p></div>
+          </div>
+        <% end %>
         
-        <% if @account.customer %>
+        <% if @account.customer and params[:action] == 'new'%>
           <%= f.hidden_field(:customer_id) %>
         <% else %>
           <div class="row">
             <div class="col s12 m4 l2"><p></p></div>
-            <div class="input-field col s12 m4 l8">
+            <div class="input-field col s12 m4 l1">
+              <i class="material-icons prefix">supervisor_account</i>
+            </div>
+            <div class="input-field col s12 m2 l5">
               <%= f.collection_select(:customer_id, @customers, :id, :name, { prompt: "Choose a Customer" }, class: "browser-default") %>
             </div>
             <div class="col s12 m4 l2"><p></p></div>
           </div>
         <% end %>
+
+
         
         <div class="col s12 m4 l2"><p></p></div>
         <div class="col s12 m4 l8">

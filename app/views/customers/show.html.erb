@@ -62,17 +62,13 @@
 <%end%> 
 
 
-
-
+<a href="<%= customers_path %>" class="btn waves-effect waves-light" name="action">Back</a>
 
 <%= link_to controller: "accounts", action: "new", customer:         @customer do %>
   <button class="btn waves-effect waves-light" type="submit" name="action">
     New Account
   </button>
 <%end%>
-
-<a href="<%= customers_path %>" class="btn waves-effect waves-light" name="action">Back</a>
-
 
 
 
