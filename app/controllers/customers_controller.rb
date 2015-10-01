@@ -62,6 +62,14 @@ class CustomersController < ApplicationController
     end
   end
 
+  def pay_off
+    if params[:customer]
+      @customer = Customer.find(params[:customer])
+      Customer.pay_off(@customer)
+      redirect_to @customer
+    end
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_customer

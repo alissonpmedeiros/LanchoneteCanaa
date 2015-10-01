@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   resources :cash_payments
   devise_for :users
   root 'welcome#index'
-
+  get 'customers/pay_off'
   resources :accounts
   resources :customers
   # The priority is based upon order of creation: first created -> highest priority.
