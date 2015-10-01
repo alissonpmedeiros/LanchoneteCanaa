@@ -1,19 +1,29 @@
 <p id="notice"><%= notice %></p>
+<%= form_for(@cash_payment) do |f| %>
+  <div class="card-panel hoverable"> 
+	<div class="row">
+		<div class="col s4" style="text-align: center;">
+	    <i class="material-icons prefix">account_circle</i>
+		  <%= f.text_field :price, class: "center-align" %>
+	  </div>
+	  <div class="col s4" style="text-align: center;">
+	    <i class="material-icons prefix">email</i>
+		  <%= f.text_field :created_at, class: "center-align" %>
+	  </div>
+	  <div class="col s4" style="text-align: center;">
+	    <i class="material-icons prefix">phone</i>
+		  <%= f.text_field :salesman, class: "center-align"  %>
+	  </div>
+	  <div class="col s12" style="text-align: center;">
+	    <i class="material-icons prefix">reorder</i>
+		  <%= f.text_field :description, class: "center-align"  %>
+	  </div>
+	</div>
+  </div>
+<%end%>
 
-<p>
-  <strong>Salesman:</strong>
-  <%= @cash_payment.salesman %>
-</p>
 
-<p>
-  <strong>Price:</strong>
-  <%= @cash_payment.price %>
-</p>
 
-<p>
-  <strong>Description:</strong>
-  <%= @cash_payment.description %>
-</p>
-
-<%= link_to 'Edit', edit_cash_payment_path(@cash_payment) %> |
-<%= link_to 'Back', cash_payments_path %>
+<a href="<%= edit_cash_payment_path(@cash_payment) %>" class="btn waves-effect waves-light" name="action">
+	Edit
+</a>

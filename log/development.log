@@ -23870,3 +23870,2421 @@ Processing by AccountsController#index as HTML
   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1[0m  [["id", 16]]
   Rendered accounts/index.html.erb within layouts/application (6.8ms)
 Completed 200 OK in 171ms (Views: 168.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/accounts" for 127.0.0.1 at 2015-10-01 09:36:12 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by AccountsController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mAccount Load (0.3ms)[0m  [1mSELECT "accounts".* FROM "accounts"  ORDER BY "accounts"."created_at" DESC[0m
+  [1m[35mCustomer Load (0.2ms)[0m  SELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1  [["id", 18]]
+  [1m[36mCustomer Load (0.1ms)[0m  [1mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1[0m  [["id", 17]]
+  [1m[35mCustomer Load (0.1ms)[0m  SELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1  [["id", 16]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1[0m  [["id", 17]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1  [["id", 16]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1[0m  [["id", 16]]
+  Rendered accounts/index.html.erb within layouts/application (32.3ms)
+Completed 200 OK in 521ms (Views: 486.8ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/customers/new" for 127.0.0.1 at 2015-10-01 09:36:20 -0300
+Processing by CustomersController#new as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered customers/_form.html.erb (22.7ms)
+  Rendered customers/new.html.erb within layouts/application (27.7ms)
+Completed 200 OK in 190ms (Views: 187.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/customers" for 127.0.0.1 at 2015-10-01 09:36:22 -0300
+Processing by CustomersController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mCustomer Load (0.3ms)[0m  SELECT "customers".* FROM "customers"  ORDER BY "customers"."name" ASC
+  Rendered customers/index.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 185ms (Views: 182.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/accounts" for 127.0.0.1 at 2015-10-01 09:36:45 -0300
+Processing by AccountsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mAccount Load (0.3ms)[0m  SELECT "accounts".* FROM "accounts"  ORDER BY "accounts"."created_at" DESC
+  [1m[36mCustomer Load (0.2ms)[0m  [1mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1[0m  [["id", 18]]
+  [1m[35mCustomer Load (0.1ms)[0m  SELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1  [["id", 17]]
+  [1m[36mCustomer Load (0.1ms)[0m  [1mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1[0m  [["id", 16]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1  [["id", 17]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1[0m  [["id", 16]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1  [["id", 16]]
+  Rendered accounts/index.html.erb within layouts/application (10.2ms)
+Completed 200 OK in 176ms (Views: 172.5ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/accounts/new" for 127.0.0.1 at 2015-10-01 09:36:54 -0300
+Processing by AccountsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mCustomer Load (0.2ms)[0m  SELECT "customers".* FROM "customers"
+  Rendered accounts/_form.html.erb (6.8ms)
+  Rendered accounts/new.html.erb within layouts/application (8.4ms)
+Completed 200 OK in 185ms (Views: 182.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/accounts" for 127.0.0.1 at 2015-10-01 09:36:57 -0300
+Processing by AccountsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mAccount Load (0.4ms)[0m  SELECT "accounts".* FROM "accounts"  ORDER BY "accounts"."created_at" DESC
+  [1m[36mCustomer Load (0.2ms)[0m  [1mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1[0m  [["id", 18]]
+  [1m[35mCustomer Load (0.1ms)[0m  SELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1  [["id", 17]]
+  [1m[36mCustomer Load (0.1ms)[0m  [1mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1[0m  [["id", 16]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1  [["id", 17]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1[0m  [["id", 16]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1  [["id", 16]]
+  Rendered accounts/index.html.erb within layouts/application (11.5ms)
+Completed 200 OK in 190ms (Views: 186.0ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/accounts/new" for 127.0.0.1 at 2015-10-01 09:36:58 -0300
+Processing by AccountsController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mCustomer Load (0.2ms)[0m  SELECT "customers".* FROM "customers"
+  Rendered accounts/_form.html.erb (1.7ms)
+  Rendered accounts/new.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 188ms (Views: 185.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/cash_payments" for 127.0.0.1 at 2015-10-01 09:37:02 -0300
+Processing by CashPaymentsController#index as HTML
+  [1m[36mCashPayment Load (0.2ms)[0m  [1mSELECT "cash_payments".* FROM "cash_payments"  ORDER BY "cash_payments"."created_at" DESC[0m
+  Rendered cash_payments/index.html.erb within layouts/application (2.7ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Completed 200 OK in 185ms (Views: 181.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/cash_payments/new" for 127.0.0.1 at 2015-10-01 09:37:05 -0300
+Processing by CashPaymentsController#new as HTML
+  Rendered cash_payments/_form.html.erb (11.9ms)
+  Rendered cash_payments/new.html.erb within layouts/application (13.7ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 214ms (Views: 209.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/cash_payments" for 127.0.0.1 at 2015-10-01 09:37:08 -0300
+Processing by CashPaymentsController#index as HTML
+  [1m[35mCashPayment Load (0.2ms)[0m  SELECT "cash_payments".* FROM "cash_payments"  ORDER BY "cash_payments"."created_at" DESC
+  Rendered cash_payments/index.html.erb within layouts/application (0.8ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 170ms (Views: 169.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/cash_payments" for 127.0.0.1 at 2015-10-01 09:43:22 -0300
+Processing by CashPaymentsController#index as HTML
+  [1m[35mCashPayment Load (0.2ms)[0m  SELECT "cash_payments".* FROM "cash_payments"  ORDER BY "cash_payments"."created_at" DESC
+  Rendered cash_payments/index.html.erb within layouts/application (1.2ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 189ms (Views: 187.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/cash_payments/new" for 127.0.0.1 at 2015-10-01 10:15:11 -0300
+Processing by CashPaymentsController#new as HTML
+  Rendered cash_payments/_form.html.erb (2.9ms)
+  Rendered cash_payments/new.html.erb within layouts/application (4.0ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Completed 200 OK in 192ms (Views: 191.2ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/cash_payments" for 127.0.0.1 at 2015-10-01 10:15:17 -0300
+Processing by CashPaymentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ldEyJsGJx3/hC8AD5+QtBPnuvm24LgmdpPwHwqhojjYereTq+a1rtncZdKx6Qi9IgzX2k//67Ka77HIEVPJ9aw==", "cash_payment"=>{"salesman"=>"lívia", "price"=>"200", "description"=>""}, "commit"=>"Create Cash payment"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "cash_payments" ("salesman", "price", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["salesman", "lívia"], ["price", 200.0], ["description", ""], ["created_at", "2015-10-01 13:15:17.142254"], ["updated_at", "2015-10-01 13:15:17.142254"]]
+  [1m[36m (261.9ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/cash_payments/1
+Completed 302 Found in 308ms (ActiveRecord: 262.4ms)
+
+
+Started GET "/cash_payments/1" for 127.0.0.1 at 2015-10-01 10:15:17 -0300
+Processing by CashPaymentsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mCashPayment Load (0.2ms)[0m  SELECT  "cash_payments".* FROM "cash_payments" WHERE "cash_payments"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered cash_payments/show.html.erb within layouts/application (0.9ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 181ms (Views: 178.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/cash_payments" for 127.0.0.1 at 2015-10-01 10:15:19 -0300
+Processing by CashPaymentsController#index as HTML
+  [1m[35mCashPayment Load (0.3ms)[0m  SELECT "cash_payments".* FROM "cash_payments"  ORDER BY "cash_payments"."created_at" DESC
+  Rendered cash_payments/index.html.erb within layouts/application (1.8ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 170ms (Views: 168.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/customers" for 127.0.0.1 at 2015-10-01 10:16:32 -0300
+Processing by CustomersController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mCustomer Load (0.2ms)[0m  [1mSELECT "customers".* FROM "customers"  ORDER BY "customers"."name" ASC[0m
+  Rendered customers/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 164ms (Views: 162.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/customers/new" for 127.0.0.1 at 2015-10-01 10:16:34 -0300
+Processing by CustomersController#new as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered customers/_form.html.erb (1.1ms)
+  Rendered customers/new.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 177ms (Views: 174.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/customers/new" for 127.0.0.1 at 2015-10-01 10:17:55 -0300
+Processing by CustomersController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered customers/_form.html.erb (1.0ms)
+  Rendered customers/new.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 175ms (Views: 172.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/customers/new" for 127.0.0.1 at 2015-10-01 10:18:05 -0300
+Processing by CustomersController#new as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered customers/_form.html.erb (0.9ms)
+  Rendered customers/new.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 154ms (Views: 153.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/customers/new" for 127.0.0.1 at 2015-10-01 10:18:10 -0300
+Processing by CustomersController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered customers/_form.html.erb (1.2ms)
+  Rendered customers/new.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 166ms (Views: 163.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/customers" for 127.0.0.1 at 2015-10-01 10:18:12 -0300
+Processing by CustomersController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mCustomer Load (0.2ms)[0m  [1mSELECT "customers".* FROM "customers"  ORDER BY "customers"."name" ASC[0m
+  Rendered customers/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 166ms (Views: 164.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/customers/new" for 127.0.0.1 at 2015-10-01 10:18:13 -0300
+Processing by CustomersController#new as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered customers/_form.html.erb (1.0ms)
+  Rendered customers/new.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 177ms (Views: 175.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/accounts/new" for 127.0.0.1 at 2015-10-01 10:18:13 -0300
+Processing by AccountsController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mCustomer Load (0.2ms)[0m  SELECT "customers".* FROM "customers"
+  Rendered accounts/_form.html.erb (1.9ms)
+  Rendered accounts/new.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 166ms (Views: 164.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/customers/new" for 127.0.0.1 at 2015-10-01 10:18:16 -0300
+Processing by CustomersController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered customers/_form.html.erb (1.1ms)
+  Rendered customers/new.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 167ms (Views: 163.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/accounts/new" for 127.0.0.1 at 2015-10-01 10:18:18 -0300
+Processing by AccountsController#new as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mCustomer Load (0.2ms)[0m  [1mSELECT "customers".* FROM "customers"[0m
+  Rendered accounts/_form.html.erb (2.6ms)
+  Rendered accounts/new.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 183ms (Views: 180.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/customers/new" for 127.0.0.1 at 2015-10-01 10:18:20 -0300
+Processing by CustomersController#new as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered customers/_form.html.erb (1.3ms)
+  Rendered customers/new.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 175ms (Views: 172.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/customers/new" for 127.0.0.1 at 2015-10-01 10:18:56 -0300
+Processing by CustomersController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered customers/_form.html.erb (0.9ms)
+  Rendered customers/new.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 200ms (Views: 197.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/accounts/new" for 127.0.0.1 at 2015-10-01 10:18:58 -0300
+Processing by AccountsController#new as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mCustomer Load (0.3ms)[0m  [1mSELECT "customers".* FROM "customers"[0m
+  Rendered accounts/_form.html.erb (3.4ms)
+  Rendered accounts/new.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 162ms (Views: 159.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/customers/new" for 127.0.0.1 at 2015-10-01 10:19:00 -0300
+Processing by CustomersController#new as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered customers/_form.html.erb (1.8ms)
+  Rendered customers/new.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 186ms (Views: 183.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/accounts/new" for 127.0.0.1 at 2015-10-01 10:19:01 -0300
+Processing by AccountsController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mCustomer Load (0.2ms)[0m  SELECT "customers".* FROM "customers"
+  Rendered accounts/_form.html.erb (1.9ms)
+  Rendered accounts/new.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 186ms (Views: 184.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/customers/new" for 127.0.0.1 at 2015-10-01 10:19:06 -0300
+Processing by CustomersController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered customers/_form.html.erb (1.0ms)
+  Rendered customers/new.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 167ms (Views: 164.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/accounts/new" for 127.0.0.1 at 2015-10-01 10:19:09 -0300
+Processing by AccountsController#new as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mCustomer Load (0.4ms)[0m  [1mSELECT "customers".* FROM "customers"[0m
+  Rendered accounts/_form.html.erb (4.1ms)
+  Rendered accounts/new.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 177ms (Views: 173.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/customers/new" for 127.0.0.1 at 2015-10-01 10:19:15 -0300
+Processing by CustomersController#new as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered customers/_form.html.erb (1.1ms)
+  Rendered customers/new.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 169ms (Views: 166.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/customers/new" for 127.0.0.1 at 2015-10-01 10:19:31 -0300
+Processing by CustomersController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered customers/_form.html.erb (2.0ms)
+  Rendered customers/new.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 238ms (Views: 236.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/accounts/new" for 127.0.0.1 at 2015-10-01 10:19:32 -0300
+Processing by AccountsController#new as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mCustomer Load (0.2ms)[0m  [1mSELECT "customers".* FROM "customers"[0m
+  Rendered accounts/_form.html.erb (4.2ms)
+  Rendered accounts/new.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 243ms (Views: 239.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/customers/new" for 127.0.0.1 at 2015-10-01 10:19:34 -0300
+Processing by CustomersController#new as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered customers/_form.html.erb (1.4ms)
+  Rendered customers/new.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 171ms (Views: 169.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/cash_payments/new" for 127.0.0.1 at 2015-10-01 10:19:44 -0300
+Processing by CashPaymentsController#new as HTML
+  Rendered cash_payments/_form.html.erb (5.2ms)
+  Rendered cash_payments/new.html.erb within layouts/application (6.8ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 195ms (Views: 193.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/cash_payments/new" for 127.0.0.1 at 2015-10-01 10:22:47 -0300
+Processing by CashPaymentsController#new as HTML
+  Rendered cash_payments/_form.html.erb (32.8ms)
+  Rendered cash_payments/new.html.erb within layouts/application (34.0ms)
+Completed 500 Internal Server Error in 38ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined local variable or method `cash_payment' for #<#<Class:0x007fc670ce1a88>:0x007fc65e460790>):
+    1: <%= form_for(cash_payment) do |f| %>
+    2:   <% if @account.errors.any? %>
+    3:     <div id="error_explanation">
+    4:       <h2><%= pluralize(@account.errors.count, "error") %> prohibited this account from being saved:</h2>
+  app/views/cash_payments/_form.html.erb:1:in `_app_views_cash_payments__form_html_erb__4125698658792995459_70244979661560'
+  app/views/cash_payments/new.html.erb:3:in `_app_views_cash_payments_new_html_erb__2567480462574577040_70244975000620'
+
+
+  Rendered /home/alisson/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (11.9ms)
+  Rendered /home/alisson/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.0ms)
+  Rendered /home/alisson/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /home/alisson/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (40.6ms)
+  Rendered /home/alisson/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /home/alisson/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/alisson/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/alisson/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/alisson/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (19.8ms)
+  Rendered /home/alisson/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/alisson/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/alisson/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (39.7ms)
+
+
+Started GET "/customers/new" for 127.0.0.1 at 2015-10-01 10:23:04 -0300
+Processing by CustomersController#new as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered customers/_form.html.erb (1.4ms)
+  Rendered customers/new.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 175ms (Views: 172.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/cash_payments/new" for 127.0.0.1 at 2015-10-01 10:23:09 -0300
+Processing by CashPaymentsController#new as HTML
+  Rendered cash_payments/_form.html.erb (4.9ms)
+  Rendered cash_payments/new.html.erb within layouts/application (6.1ms)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined method `errors' for nil:NilClass):
+    1: <%= form_for(@cash_payment) do |f| %>
+    2:   <% if @account.errors.any? %>
+    3:     <div id="error_explanation">
+    4:       <h2><%= pluralize(@account.errors.count, "error") %> prohibited this account from being saved:</h2>
+    5: 
+  app/views/cash_payments/_form.html.erb:2:in `block in _app_views_cash_payments__form_html_erb__4125698658792995459_70244975337280'
+  app/views/cash_payments/_form.html.erb:1:in `_app_views_cash_payments__form_html_erb__4125698658792995459_70244975337280'
+  app/views/cash_payments/new.html.erb:3:in `_app_views_cash_payments_new_html_erb__2567480462574577040_70244975000620'
+
+
+  Rendered /home/alisson/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.0ms)
+  Rendered /home/alisson/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.1ms)
+  Rendered /home/alisson/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /home/alisson/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (28.7ms)
+  Rendered /home/alisson/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /home/alisson/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/alisson/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/alisson/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/alisson/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (19.4ms)
+  Rendered /home/alisson/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/alisson/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/alisson/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (38.0ms)
+
+
+Started GET "/cash_payments/new" for 127.0.0.1 at 2015-10-01 10:23:59 -0300
+Processing by CashPaymentsController#new as HTML
+  Rendered cash_payments/_form.html.erb (2.6ms)
+  Rendered cash_payments/new.html.erb within layouts/application (3.5ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 181ms (Views: 179.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/cash_payments/new" for 127.0.0.1 at 2015-10-01 10:24:19 -0300
+Processing by CashPaymentsController#new as HTML
+  Rendered cash_payments/_form.html.erb (1.7ms)
+  Rendered cash_payments/new.html.erb within layouts/application (3.8ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Completed 200 OK in 199ms (Views: 196.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/customers/new" for 127.0.0.1 at 2015-10-01 10:25:07 -0300
+Processing by CustomersController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered customers/_form.html.erb (0.9ms)
+  Rendered customers/new.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 171ms (Views: 168.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/accounts/new" for 127.0.0.1 at 2015-10-01 10:25:10 -0300
+Processing by AccountsController#new as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mCustomer Load (0.3ms)[0m  [1mSELECT "customers".* FROM "customers"[0m
+  Rendered accounts/_form.html.erb (3.1ms)
+  Rendered accounts/new.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 165ms (Views: 162.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/customers/new" for 127.0.0.1 at 2015-10-01 10:25:12 -0300
+Processing by CustomersController#new as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered customers/_form.html.erb (1.5ms)
+  Rendered customers/new.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 173ms (Views: 170.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/accounts/new" for 127.0.0.1 at 2015-10-01 10:25:14 -0300
+Processing by AccountsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mCustomer Load (0.2ms)[0m  SELECT "customers".* FROM "customers"
+  Rendered accounts/_form.html.erb (2.5ms)
+  Rendered accounts/new.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 188ms (Views: 184.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/cash_payments/new" for 127.0.0.1 at 2015-10-01 10:25:16 -0300
+Processing by CashPaymentsController#new as HTML
+  Rendered cash_payments/_form.html.erb (1.0ms)
+  Rendered cash_payments/new.html.erb within layouts/application (2.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 176ms (Views: 175.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/accounts/new" for 127.0.0.1 at 2015-10-01 10:25:21 -0300
+Processing by AccountsController#new as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mCustomer Load (0.4ms)[0m  [1mSELECT "customers".* FROM "customers"[0m
+  Rendered accounts/_form.html.erb (3.2ms)
+  Rendered accounts/new.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 170ms (Views: 167.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/cash_payments/new" for 127.0.0.1 at 2015-10-01 10:25:27 -0300
+Processing by CashPaymentsController#new as HTML
+  Rendered cash_payments/_form.html.erb (1.0ms)
+  Rendered cash_payments/new.html.erb within layouts/application (2.4ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Completed 200 OK in 172ms (Views: 171.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/accounts/new" for 127.0.0.1 at 2015-10-01 10:25:29 -0300
+Processing by AccountsController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mCustomer Load (0.2ms)[0m  SELECT "customers".* FROM "customers"
+  Rendered accounts/_form.html.erb (2.1ms)
+  Rendered accounts/new.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 168ms (Views: 166.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/customers/new" for 127.0.0.1 at 2015-10-01 10:25:43 -0300
+Processing by CustomersController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered customers/_form.html.erb (1.3ms)
+  Rendered customers/new.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 169ms (Views: 166.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/accounts/new" for 127.0.0.1 at 2015-10-01 10:25:45 -0300
+Processing by AccountsController#new as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mCustomer Load (0.2ms)[0m  [1mSELECT "customers".* FROM "customers"[0m
+  Rendered accounts/_form.html.erb (2.8ms)
+  Rendered accounts/new.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 169ms (Views: 167.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/cash_payments/new" for 127.0.0.1 at 2015-10-01 10:25:47 -0300
+Processing by CashPaymentsController#new as HTML
+  Rendered cash_payments/_form.html.erb (2.0ms)
+  Rendered cash_payments/new.html.erb within layouts/application (3.1ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Completed 200 OK in 187ms (Views: 186.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/cash_payments/new" for 127.0.0.1 at 2015-10-01 10:26:02 -0300
+Processing by CashPaymentsController#new as HTML
+  Rendered cash_payments/_form.html.erb (2.5ms)
+  Rendered cash_payments/new.html.erb within layouts/application (3.4ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 177ms (Views: 175.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/accounts" for 127.0.0.1 at 2015-10-01 10:30:40 -0300
+Processing by AccountsController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mAccount Load (0.3ms)[0m  [1mSELECT "accounts".* FROM "accounts"  ORDER BY "accounts"."created_at" DESC[0m
+  [1m[35mCustomer Load (0.1ms)[0m  SELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1  [["id", 18]]
+  [1m[36mCustomer Load (0.1ms)[0m  [1mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1[0m  [["id", 17]]
+  [1m[35mCustomer Load (0.1ms)[0m  SELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1  [["id", 16]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1[0m  [["id", 17]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1  [["id", 16]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1[0m  [["id", 16]]
+  Rendered accounts/index.html.erb within layouts/application (8.4ms)
+Completed 200 OK in 175ms (Views: 172.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/customers/16" for 127.0.0.1 at 2015-10-01 10:30:51 -0300
+Processing by CustomersController#show as HTML
+  Parameters: {"id"=>"16"}
+  [1m[35mCustomer Load (0.1ms)[0m  SELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1  [["id", 16]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mAccount Load (0.3ms)[0m  SELECT "accounts".* FROM "accounts" WHERE "accounts"."customer_id" = ?  [["customer_id", 16]]
+  [1m[36mAccount Load (0.2ms)[0m  [1mSELECT "accounts".* FROM "accounts" WHERE "accounts"."customer_id" = ?  ORDER BY "accounts"."created_at" DESC[0m  [["customer_id", 16]]
+  Rendered customers/show.html.erb within layouts/application (27.7ms)
+Completed 200 OK in 187ms (Views: 182.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/customers" for 127.0.0.1 at 2015-10-01 10:30:53 -0300
+Processing by CustomersController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mCustomer Load (0.2ms)[0m  [1mSELECT "customers".* FROM "customers"  ORDER BY "customers"."name" ASC[0m
+  Rendered customers/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 164ms (Views: 161.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/customers/new" for 127.0.0.1 at 2015-10-01 10:30:55 -0300
+Processing by CustomersController#new as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered customers/_form.html.erb (0.9ms)
+  Rendered customers/new.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 169ms (Views: 166.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/accounts/new" for 127.0.0.1 at 2015-10-01 10:30:56 -0300
+Processing by AccountsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mCustomer Load (0.4ms)[0m  SELECT "customers".* FROM "customers"
+  Rendered accounts/_form.html.erb (3.8ms)
+  Rendered accounts/new.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 186ms (Views: 182.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/cash_payments/new" for 127.0.0.1 at 2015-10-01 10:30:58 -0300
+Processing by CashPaymentsController#new as HTML
+  Rendered cash_payments/_form.html.erb (1.2ms)
+  Rendered cash_payments/new.html.erb within layouts/application (2.0ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 211ms (Views: 209.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/accounts/new" for 127.0.0.1 at 2015-10-01 10:31:01 -0300
+Processing by AccountsController#new as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mCustomer Load (0.2ms)[0m  [1mSELECT "customers".* FROM "customers"[0m
+  Rendered accounts/_form.html.erb (2.7ms)
+  Rendered accounts/new.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 183ms (Views: 181.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/customers/new" for 127.0.0.1 at 2015-10-01 10:31:03 -0300
+Processing by CustomersController#new as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered customers/_form.html.erb (1.4ms)
+  Rendered customers/new.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 162ms (Views: 159.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/customers" for 127.0.0.1 at 2015-10-01 10:31:05 -0300
+Processing by CustomersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mCustomer Load (0.2ms)[0m  SELECT "customers".* FROM "customers"  ORDER BY "customers"."name" ASC
+  Rendered customers/index.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 167ms (Views: 164.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/accounts" for 127.0.0.1 at 2015-10-01 10:31:06 -0300
+Processing by AccountsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mAccount Load (0.5ms)[0m  SELECT "accounts".* FROM "accounts"  ORDER BY "accounts"."created_at" DESC
+  [1m[36mCustomer Load (0.1ms)[0m  [1mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1[0m  [["id", 18]]
+  [1m[35mCustomer Load (0.1ms)[0m  SELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1  [["id", 17]]
+  [1m[36mCustomer Load (0.1ms)[0m  [1mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1[0m  [["id", 16]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1  [["id", 17]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1[0m  [["id", 16]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1  [["id", 16]]
+  Rendered accounts/index.html.erb within layouts/application (8.5ms)
+Completed 200 OK in 221ms (Views: 217.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/cash_payments" for 127.0.0.1 at 2015-10-01 10:31:09 -0300
+Processing by CashPaymentsController#index as HTML
+  [1m[36mCashPayment Load (0.2ms)[0m  [1mSELECT "cash_payments".* FROM "cash_payments"  ORDER BY "cash_payments"."created_at" DESC[0m
+  Rendered cash_payments/index.html.erb within layouts/application (1.6ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Completed 200 OK in 234ms (Views: 232.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/customers/new" for 127.0.0.1 at 2015-10-01 10:31:40 -0300
+Processing by CustomersController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered customers/_form.html.erb (0.8ms)
+  Rendered customers/new.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 226ms (Views: 224.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/accounts/new" for 127.0.0.1 at 2015-10-01 10:31:41 -0300
+Processing by AccountsController#new as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mCustomer Load (0.3ms)[0m  [1mSELECT "customers".* FROM "customers"[0m
+  Rendered accounts/_form.html.erb (2.7ms)
+  Rendered accounts/new.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 237ms (Views: 234.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/cash_payments/new" for 127.0.0.1 at 2015-10-01 10:31:41 -0300
+Processing by CashPaymentsController#new as HTML
+  Rendered cash_payments/_form.html.erb (2.2ms)
+  Rendered cash_payments/new.html.erb within layouts/application (3.1ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Completed 200 OK in 203ms (Views: 201.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/cash_payments/new" for 127.0.0.1 at 2015-10-01 10:35:15 -0300
+Processing by CashPaymentsController#new as HTML
+  Rendered cash_payments/_form.html.erb (1.1ms)
+  Rendered cash_payments/new.html.erb within layouts/application (1.9ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 166ms (Views: 164.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/customers" for 127.0.0.1 at 2015-10-01 10:35:53 -0300
+Processing by CustomersController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mCustomer Load (0.2ms)[0m  [1mSELECT "customers".* FROM "customers"  ORDER BY "customers"."name" ASC[0m
+  Rendered customers/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 164ms (Views: 162.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/accounts" for 127.0.0.1 at 2015-10-01 10:35:56 -0300
+Processing by AccountsController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mAccount Load (0.3ms)[0m  [1mSELECT "accounts".* FROM "accounts"  ORDER BY "accounts"."created_at" DESC[0m
+  [1m[35mCustomer Load (0.2ms)[0m  SELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1  [["id", 18]]
+  [1m[36mCustomer Load (0.2ms)[0m  [1mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1[0m  [["id", 17]]
+  [1m[35mCustomer Load (0.1ms)[0m  SELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1  [["id", 16]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1[0m  [["id", 17]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1  [["id", 16]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1[0m  [["id", 16]]
+  Rendered accounts/index.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 174ms (Views: 171.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/cash_payments" for 127.0.0.1 at 2015-10-01 10:37:10 -0300
+Processing by CashPaymentsController#index as HTML
+  [1m[35mCashPayment Load (0.2ms)[0m  SELECT "cash_payments".* FROM "cash_payments"  ORDER BY "cash_payments"."created_at" DESC
+  Rendered cash_payments/index.html.erb within layouts/application (2.5ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 175ms (Views: 174.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/cash_payments" for 127.0.0.1 at 2015-10-01 10:37:59 -0300
+Processing by CashPaymentsController#index as HTML
+  [1m[35mCashPayment Load (0.2ms)[0m  SELECT "cash_payments".* FROM "cash_payments"  ORDER BY "cash_payments"."created_at" DESC
+  Rendered cash_payments/index.html.erb within layouts/application (2.6ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 175ms (Views: 174.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/customers" for 127.0.0.1 at 2015-10-01 10:38:03 -0300
+Processing by CustomersController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mCustomer Load (0.2ms)[0m  [1mSELECT "customers".* FROM "customers"  ORDER BY "customers"."name" ASC[0m
+  Rendered customers/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 171ms (Views: 169.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/accounts" for 127.0.0.1 at 2015-10-01 10:38:05 -0300
+Processing by AccountsController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mAccount Load (0.3ms)[0m  [1mSELECT "accounts".* FROM "accounts"  ORDER BY "accounts"."created_at" DESC[0m
+  [1m[35mCustomer Load (0.1ms)[0m  SELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1  [["id", 18]]
+  [1m[36mCustomer Load (0.1ms)[0m  [1mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1[0m  [["id", 17]]
+  [1m[35mCustomer Load (0.1ms)[0m  SELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1  [["id", 16]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1[0m  [["id", 17]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1  [["id", 16]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1[0m  [["id", 16]]
+  Rendered accounts/index.html.erb within layouts/application (9.2ms)
+Completed 200 OK in 171ms (Views: 168.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/cash_payments" for 127.0.0.1 at 2015-10-01 10:38:07 -0300
+Processing by CashPaymentsController#index as HTML
+  [1m[35mCashPayment Load (0.2ms)[0m  SELECT "cash_payments".* FROM "cash_payments"  ORDER BY "cash_payments"."created_at" DESC
+  Rendered cash_payments/index.html.erb within layouts/application (1.5ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 164ms (Views: 162.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/cash_payments" for 127.0.0.1 at 2015-10-01 10:38:59 -0300
+Processing by CashPaymentsController#index as HTML
+  [1m[35mCashPayment Load (0.3ms)[0m  SELECT "cash_payments".* FROM "cash_payments"  ORDER BY "cash_payments"."created_at" DESC
+  Rendered cash_payments/index.html.erb within layouts/application (3.6ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 173ms (Views: 171.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/cash_payments" for 127.0.0.1 at 2015-10-01 10:39:05 -0300
+Processing by CashPaymentsController#index as HTML
+  [1m[35mCashPayment Load (0.3ms)[0m  SELECT "cash_payments".* FROM "cash_payments"  ORDER BY "cash_payments"."created_at" DESC
+  Rendered cash_payments/index.html.erb within layouts/application (3.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 169ms (Views: 168.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/customers" for 127.0.0.1 at 2015-10-01 10:39:24 -0300
+Processing by CustomersController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mCustomer Load (0.3ms)[0m  [1mSELECT "customers".* FROM "customers"  ORDER BY "customers"."name" ASC[0m
+  Rendered customers/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 166ms (Views: 163.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/accounts" for 127.0.0.1 at 2015-10-01 10:39:26 -0300
+Processing by AccountsController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mAccount Load (0.3ms)[0m  [1mSELECT "accounts".* FROM "accounts"  ORDER BY "accounts"."created_at" DESC[0m
+  [1m[35mCustomer Load (0.1ms)[0m  SELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1  [["id", 18]]
+  [1m[36mCustomer Load (0.1ms)[0m  [1mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1[0m  [["id", 17]]
+  [1m[35mCustomer Load (0.1ms)[0m  SELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1  [["id", 16]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1[0m  [["id", 17]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1  [["id", 16]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1[0m  [["id", 16]]
+  Rendered accounts/index.html.erb within layouts/application (10.0ms)
+Completed 200 OK in 174ms (Views: 170.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/cash_payments" for 127.0.0.1 at 2015-10-01 10:39:28 -0300
+Processing by CashPaymentsController#index as HTML
+  [1m[35mCashPayment Load (0.3ms)[0m  SELECT "cash_payments".* FROM "cash_payments"  ORDER BY "cash_payments"."created_at" DESC
+  Rendered cash_payments/index.html.erb within layouts/application (2.0ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 178ms (Views: 176.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/cash_payments" for 127.0.0.1 at 2015-10-01 10:39:33 -0300
+Processing by CashPaymentsController#index as HTML
+  [1m[35mCashPayment Load (0.3ms)[0m  SELECT "cash_payments".* FROM "cash_payments"  ORDER BY "cash_payments"."created_at" DESC
+  Rendered cash_payments/index.html.erb within layouts/application (3.8ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 181ms (Views: 179.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/new_cash_payment_path" for 127.0.0.1 at 2015-10-01 10:39:34 -0300
+
+ActionController::RoutingError (No route matches [GET] "/new_cash_payment_path"):
+  actionpack (4.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.3) lib/rails/engine.rb:518:in `call'
+  railties (4.2.3) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /home/alisson/.rbenv/versions/2.2.2/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /home/alisson/.rbenv/versions/2.2.2/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /home/alisson/.rbenv/versions/2.2.2/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /home/alisson/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /home/alisson/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/routes/_route.html.erb (3.2ms)
+  Rendered /home/alisson/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.0ms)
+  Rendered /home/alisson/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /home/alisson/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (41.7ms)
+  Rendered /home/alisson/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /home/alisson/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/alisson/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/alisson/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/alisson/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (18.2ms)
+  Rendered /home/alisson/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/alisson/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /home/alisson/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (36.7ms)
+
+
+Started GET "/cash_payments" for 127.0.0.1 at 2015-10-01 10:40:10 -0300
+Processing by CashPaymentsController#index as HTML
+  [1m[35mCashPayment Load (0.3ms)[0m  SELECT "cash_payments".* FROM "cash_payments"  ORDER BY "cash_payments"."created_at" DESC
+  Rendered cash_payments/index.html.erb within layouts/application (3.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 176ms (Views: 174.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/cash_payments/new" for 127.0.0.1 at 2015-10-01 10:40:11 -0300
+Processing by CashPaymentsController#new as HTML
+  Rendered cash_payments/_form.html.erb (1.4ms)
+  Rendered cash_payments/new.html.erb within layouts/application (2.2ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Completed 200 OK in 208ms (Views: 207.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/customers/new" for 127.0.0.1 at 2015-10-01 10:40:20 -0300
+Processing by CustomersController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered customers/_form.html.erb (1.0ms)
+  Rendered customers/new.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 175ms (Views: 172.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/accounts" for 127.0.0.1 at 2015-10-01 10:40:21 -0300
+Processing by AccountsController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mAccount Load (0.4ms)[0m  [1mSELECT "accounts".* FROM "accounts"  ORDER BY "accounts"."created_at" DESC[0m
+  [1m[35mCustomer Load (0.1ms)[0m  SELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1  [["id", 18]]
+  [1m[36mCustomer Load (0.1ms)[0m  [1mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1[0m  [["id", 17]]
+  [1m[35mCustomer Load (0.1ms)[0m  SELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1  [["id", 16]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1[0m  [["id", 17]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1  [["id", 16]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1[0m  [["id", 16]]
+  Rendered accounts/index.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 197ms (Views: 194.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/accounts/new" for 127.0.0.1 at 2015-10-01 10:40:24 -0300
+Processing by AccountsController#new as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mCustomer Load (0.4ms)[0m  [1mSELECT "customers".* FROM "customers"[0m
+  Rendered accounts/_form.html.erb (5.0ms)
+  Rendered accounts/new.html.erb within layouts/application (6.3ms)
+Completed 200 OK in 187ms (Views: 184.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/cash_payments" for 127.0.0.1 at 2015-10-01 10:40:26 -0300
+Processing by CashPaymentsController#index as HTML
+  [1m[35mCashPayment Load (0.3ms)[0m  SELECT "cash_payments".* FROM "cash_payments"  ORDER BY "cash_payments"."created_at" DESC
+  Rendered cash_payments/index.html.erb within layouts/application (1.9ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 171ms (Views: 170.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/customers" for 127.0.0.1 at 2015-10-01 10:43:06 -0300
+Processing by CustomersController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mCustomer Load (0.3ms)[0m  [1mSELECT "customers".* FROM "customers"  ORDER BY "customers"."name" ASC[0m
+  Rendered customers/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 175ms (Views: 172.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/customers/16" for 127.0.0.1 at 2015-10-01 10:43:07 -0300
+Processing by CustomersController#show as HTML
+  Parameters: {"id"=>"16"}
+  [1m[35mCustomer Load (0.1ms)[0m  SELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1  [["id", 16]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mAccount Load (0.1ms)[0m  SELECT "accounts".* FROM "accounts" WHERE "accounts"."customer_id" = ?  [["customer_id", 16]]
+  [1m[36mAccount Load (0.1ms)[0m  [1mSELECT "accounts".* FROM "accounts" WHERE "accounts"."customer_id" = ?  ORDER BY "accounts"."created_at" DESC[0m  [["customer_id", 16]]
+  Rendered customers/show.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 168ms (Views: 165.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/accounts" for 127.0.0.1 at 2015-10-01 10:43:16 -0300
+Processing by AccountsController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mAccount Load (0.2ms)[0m  [1mSELECT "accounts".* FROM "accounts"  ORDER BY "accounts"."created_at" DESC[0m
+  [1m[35mCustomer Load (0.1ms)[0m  SELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1  [["id", 18]]
+  [1m[36mCustomer Load (0.1ms)[0m  [1mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1[0m  [["id", 17]]
+  [1m[35mCustomer Load (0.1ms)[0m  SELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1  [["id", 16]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1[0m  [["id", 17]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1  [["id", 16]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1[0m  [["id", 16]]
+  Rendered accounts/index.html.erb within layouts/application (7.8ms)
+Completed 200 OK in 172ms (Views: 169.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/accounts/56" for 127.0.0.1 at 2015-10-01 10:43:19 -0300
+Processing by AccountsController#show as HTML
+  Parameters: {"id"=>"56"}
+  [1m[35mAccount Load (0.2ms)[0m  SELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = ? LIMIT 1  [["id", 56]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mCustomer Load (0.2ms)[0m  SELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1  [["id", 18]]
+  Rendered accounts/show.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 271ms (Views: 267.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/accounts/56" for 127.0.0.1 at 2015-10-01 10:43:30 -0300
+Processing by AccountsController#show as HTML
+  Parameters: {"id"=>"56"}
+  [1m[36mAccount Load (0.1ms)[0m  [1mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = ? LIMIT 1[0m  [["id", 56]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mCustomer Load (0.1ms)[0m  [1mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1[0m  [["id", 18]]
+  Rendered accounts/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 287ms (Views: 284.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/customers" for 127.0.0.1 at 2015-10-01 10:43:32 -0300
+Processing by CustomersController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mCustomer Load (0.2ms)[0m  [1mSELECT "customers".* FROM "customers"  ORDER BY "customers"."name" ASC[0m
+  Rendered customers/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 219ms (Views: 215.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/customers/16" for 127.0.0.1 at 2015-10-01 10:43:38 -0300
+Processing by CustomersController#show as HTML
+  Parameters: {"id"=>"16"}
+  [1m[35mCustomer Load (0.2ms)[0m  SELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1  [["id", 16]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mAccount Load (0.2ms)[0m  SELECT "accounts".* FROM "accounts" WHERE "accounts"."customer_id" = ?  [["customer_id", 16]]
+  [1m[36mAccount Load (0.2ms)[0m  [1mSELECT "accounts".* FROM "accounts" WHERE "accounts"."customer_id" = ?  ORDER BY "accounts"."created_at" DESC[0m  [["customer_id", 16]]
+  Rendered customers/show.html.erb within layouts/application (7.5ms)
+Completed 200 OK in 178ms (Views: 174.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/accounts" for 127.0.0.1 at 2015-10-01 10:51:40 -0300
+Processing by AccountsController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mAccount Load (0.2ms)[0m  [1mSELECT "accounts".* FROM "accounts"  ORDER BY "accounts"."created_at" DESC[0m
+  [1m[35mCustomer Load (0.1ms)[0m  SELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1  [["id", 18]]
+  [1m[36mCustomer Load (0.1ms)[0m  [1mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1[0m  [["id", 17]]
+  [1m[35mCustomer Load (0.1ms)[0m  SELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1  [["id", 16]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1[0m  [["id", 17]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1  [["id", 16]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1[0m  [["id", 16]]
+  Rendered accounts/index.html.erb within layouts/application (7.2ms)
+Completed 200 OK in 165ms (Views: 163.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/accounts/56" for 127.0.0.1 at 2015-10-01 10:51:42 -0300
+Processing by AccountsController#show as HTML
+  Parameters: {"id"=>"56"}
+  [1m[35mAccount Load (0.1ms)[0m  SELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = ? LIMIT 1  [["id", 56]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mCustomer Load (0.1ms)[0m  SELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1  [["id", 18]]
+  Rendered accounts/show.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 223ms (Views: 220.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/customers" for 127.0.0.1 at 2015-10-01 10:51:43 -0300
+Processing by CustomersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mCustomer Load (0.3ms)[0m  SELECT "customers".* FROM "customers"  ORDER BY "customers"."name" ASC
+  Rendered customers/index.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 184ms (Views: 180.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/customers/16" for 127.0.0.1 at 2015-10-01 10:51:45 -0300
+Processing by CustomersController#show as HTML
+  Parameters: {"id"=>"16"}
+  [1m[36mCustomer Load (0.1ms)[0m  [1mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1[0m  [["id", 16]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mAccount Load (0.1ms)[0m  [1mSELECT "accounts".* FROM "accounts" WHERE "accounts"."customer_id" = ?[0m  [["customer_id", 16]]
+  [1m[35mAccount Load (0.1ms)[0m  SELECT "accounts".* FROM "accounts" WHERE "accounts"."customer_id" = ?  ORDER BY "accounts"."created_at" DESC  [["customer_id", 16]]
+  Rendered customers/show.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 182ms (Views: 179.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/cash_payments" for 127.0.0.1 at 2015-10-01 10:52:42 -0300
+Processing by CashPaymentsController#index as HTML
+  [1m[36mCashPayment Load (0.3ms)[0m  [1mSELECT "cash_payments".* FROM "cash_payments"  ORDER BY "cash_payments"."created_at" DESC[0m
+  Rendered cash_payments/index.html.erb within layouts/application (2.0ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Completed 200 OK in 174ms (Views: 171.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/cash_payments/1" for 127.0.0.1 at 2015-10-01 10:52:44 -0300
+Processing by CashPaymentsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCashPayment Load (0.1ms)[0m  [1mSELECT  "cash_payments".* FROM "cash_payments" WHERE "cash_payments"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered cash_payments/show.html.erb within layouts/application (2.6ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Completed 200 OK in 208ms (Views: 207.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/cash_payments/1" for 127.0.0.1 at 2015-10-01 10:53:59 -0300
+Processing by CashPaymentsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCashPayment Load (0.1ms)[0m  [1mSELECT  "cash_payments".* FROM "cash_payments" WHERE "cash_payments"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered cash_payments/show.html.erb within layouts/application (3.1ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Completed 200 OK in 167ms (Views: 165.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/cash_payments/1" for 127.0.0.1 at 2015-10-01 10:54:24 -0300
+Processing by CashPaymentsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCashPayment Load (0.2ms)[0m  [1mSELECT  "cash_payments".* FROM "cash_payments" WHERE "cash_payments"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered cash_payments/show.html.erb within layouts/application (5.4ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Completed 200 OK in 192ms (Views: 190.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/cash_payments/1" for 127.0.0.1 at 2015-10-01 10:54:26 -0300
+Processing by CashPaymentsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCashPayment Load (0.1ms)[0m  [1mSELECT  "cash_payments".* FROM "cash_payments" WHERE "cash_payments"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered cash_payments/show.html.erb within layouts/application (1.7ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Completed 200 OK in 173ms (Views: 171.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/cash_payments/1" for 127.0.0.1 at 2015-10-01 10:54:33 -0300
+Processing by CashPaymentsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCashPayment Load (0.1ms)[0m  [1mSELECT  "cash_payments".* FROM "cash_payments" WHERE "cash_payments"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered cash_payments/show.html.erb within layouts/application (2.0ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Completed 200 OK in 193ms (Views: 191.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/cash_payments/1" for 127.0.0.1 at 2015-10-01 10:54:42 -0300
+Processing by CashPaymentsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCashPayment Load (0.1ms)[0m  [1mSELECT  "cash_payments".* FROM "cash_payments" WHERE "cash_payments"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered cash_payments/show.html.erb within layouts/application (2.5ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Completed 200 OK in 173ms (Views: 171.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/cash_payments/1" for 127.0.0.1 at 2015-10-01 10:56:14 -0300
+Processing by CashPaymentsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCashPayment Load (0.2ms)[0m  [1mSELECT  "cash_payments".* FROM "cash_payments" WHERE "cash_payments"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered cash_payments/show.html.erb within layouts/application (4.9ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Completed 200 OK in 197ms (Views: 194.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/cash_payments/1" for 127.0.0.1 at 2015-10-01 10:56:37 -0300
+Processing by CashPaymentsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCashPayment Load (0.1ms)[0m  [1mSELECT  "cash_payments".* FROM "cash_payments" WHERE "cash_payments"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered cash_payments/show.html.erb within layouts/application (2.1ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Completed 200 OK in 168ms (Views: 166.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/cash_payments/1/edit" for 127.0.0.1 at 2015-10-01 10:57:35 -0300
+Processing by CashPaymentsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCashPayment Load (0.1ms)[0m  [1mSELECT  "cash_payments".* FROM "cash_payments" WHERE "cash_payments"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered cash_payments/_form.html.erb (1.7ms)
+  Rendered cash_payments/edit.html.erb within layouts/application (3.2ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Completed 200 OK in 189ms (Views: 187.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/cash_payments/1/edit" for 127.0.0.1 at 2015-10-01 10:58:15 -0300
+Processing by CashPaymentsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCashPayment Load (0.1ms)[0m  [1mSELECT  "cash_payments".* FROM "cash_payments" WHERE "cash_payments"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered cash_payments/_form.html.erb (1.4ms)
+  Rendered cash_payments/edit.html.erb within layouts/application (2.9ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Completed 200 OK in 186ms (Views: 184.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/cash_payments" for 127.0.0.1 at 2015-10-01 10:58:19 -0300
+Processing by CashPaymentsController#index as HTML
+  [1m[36mCashPayment Load (0.2ms)[0m  [1mSELECT "cash_payments".* FROM "cash_payments"  ORDER BY "cash_payments"."created_at" DESC[0m
+  Rendered cash_payments/index.html.erb within layouts/application (1.2ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Completed 200 OK in 191ms (Views: 190.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/cash_payments/1" for 127.0.0.1 at 2015-10-01 10:58:21 -0300
+Processing by CashPaymentsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCashPayment Load (0.1ms)[0m  [1mSELECT  "cash_payments".* FROM "cash_payments" WHERE "cash_payments"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered cash_payments/show.html.erb within layouts/application (2.4ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Completed 200 OK in 275ms (Views: 274.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/accounts" for 127.0.0.1 at 2015-10-01 10:58:26 -0300
+Processing by AccountsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mAccount Load (0.2ms)[0m  SELECT "accounts".* FROM "accounts"  ORDER BY "accounts"."created_at" DESC
+  [1m[36mCustomer Load (0.1ms)[0m  [1mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1[0m  [["id", 18]]
+  [1m[35mCustomer Load (0.1ms)[0m  SELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1  [["id", 17]]
+  [1m[36mCustomer Load (0.1ms)[0m  [1mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1[0m  [["id", 16]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1  [["id", 17]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1[0m  [["id", 16]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1  [["id", 16]]
+  Rendered accounts/index.html.erb within layouts/application (6.5ms)
+Completed 200 OK in 177ms (Views: 175.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/accounts/56" for 127.0.0.1 at 2015-10-01 10:58:27 -0300
+Processing by AccountsController#show as HTML
+  Parameters: {"id"=>"56"}
+  [1m[36mAccount Load (0.2ms)[0m  [1mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = ? LIMIT 1[0m  [["id", 56]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mCustomer Load (0.3ms)[0m  [1mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1[0m  [["id", 18]]
+  Rendered accounts/show.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 219ms (Views: 216.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/cash_payments" for 127.0.0.1 at 2015-10-01 11:00:01 -0300
+Processing by CashPaymentsController#index as HTML
+  [1m[35mCashPayment Load (0.2ms)[0m  SELECT "cash_payments".* FROM "cash_payments"  ORDER BY "cash_payments"."created_at" DESC
+  Rendered cash_payments/index.html.erb within layouts/application (1.7ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 219ms (Views: 218.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/cash_payments/1" for 127.0.0.1 at 2015-10-01 11:00:02 -0300
+Processing by CashPaymentsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mCashPayment Load (0.1ms)[0m  SELECT  "cash_payments".* FROM "cash_payments" WHERE "cash_payments"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered cash_payments/show.html.erb within layouts/application (2.8ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 263ms (Views: 260.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/cash_payments/1/edit" for 127.0.0.1 at 2015-10-01 11:00:04 -0300
+Processing by CashPaymentsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mCashPayment Load (0.1ms)[0m  SELECT  "cash_payments".* FROM "cash_payments" WHERE "cash_payments"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered cash_payments/_form.html.erb (0.8ms)
+  Rendered cash_payments/edit.html.erb within layouts/application (1.4ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 173ms (Views: 171.7ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/cash_payments/1" for 127.0.0.1 at 2015-10-01 11:00:10 -0300
+Processing by CashPaymentsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3A2SU/L58W935ayiVRgB+StMxFolYM3r52af7PjdReVXcUSfyt1dpuH3GA3IvgO1UZeMpGK0KND4duoqBEe2uA==", "cash_payment"=>{"price"=>"200.0", "salesman"=>"lívia", "description"=>"testando"}, "id"=>"1"}
+  [1m[35mCashPayment Load (0.1ms)[0m  SELECT  "cash_payments".* FROM "cash_payments" WHERE "cash_payments"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "cash_payments" SET "description" = ?, "updated_at" = ? WHERE "cash_payments"."id" = ?  [["description", "testando"], ["updated_at", "2015-10-01 14:00:10.995500"], ["id", 1]]
+  [1m[36m (208.0ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/cash_payments/1
+Completed 302 Found in 213ms (ActiveRecord: 208.5ms)
+
+
+Started GET "/cash_payments/1" for 127.0.0.1 at 2015-10-01 11:00:11 -0300
+Processing by CashPaymentsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mCashPayment Load (0.1ms)[0m  SELECT  "cash_payments".* FROM "cash_payments" WHERE "cash_payments"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered cash_payments/show.html.erb within layouts/application (1.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 192ms (Views: 190.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/customers" for 127.0.0.1 at 2015-10-01 11:00:59 -0300
+Processing by CustomersController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mCustomer Load (0.2ms)[0m  [1mSELECT "customers".* FROM "customers"  ORDER BY "customers"."name" ASC[0m
+  Rendered customers/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 162ms (Views: 159.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/customers/16" for 127.0.0.1 at 2015-10-01 11:01:01 -0300
+Processing by CustomersController#show as HTML
+  Parameters: {"id"=>"16"}
+  [1m[35mCustomer Load (0.1ms)[0m  SELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1  [["id", 16]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mAccount Load (0.1ms)[0m  SELECT "accounts".* FROM "accounts" WHERE "accounts"."customer_id" = ?  [["customer_id", 16]]
+  [1m[36mAccount Load (0.1ms)[0m  [1mSELECT "accounts".* FROM "accounts" WHERE "accounts"."customer_id" = ?  ORDER BY "accounts"."created_at" DESC[0m  [["customer_id", 16]]
+  Rendered customers/show.html.erb within layouts/application (12.7ms)
+Completed 200 OK in 165ms (Views: 162.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/accounts" for 127.0.0.1 at 2015-10-01 11:06:55 -0300
+Processing by AccountsController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mAccount Load (0.3ms)[0m  [1mSELECT "accounts".* FROM "accounts"  ORDER BY "accounts"."created_at" DESC[0m
+  [1m[35mCustomer Load (0.1ms)[0m  SELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1  [["id", 18]]
+  [1m[36mCustomer Load (0.1ms)[0m  [1mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1[0m  [["id", 17]]
+  [1m[35mCustomer Load (0.1ms)[0m  SELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1  [["id", 16]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1[0m  [["id", 17]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1  [["id", 16]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1[0m  [["id", 16]]
+  Rendered accounts/index.html.erb within layouts/application (10.3ms)
+Completed 200 OK in 303ms (Views: 299.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/accounts/56" for 127.0.0.1 at 2015-10-01 11:06:58 -0300
+Processing by AccountsController#show as HTML
+  Parameters: {"id"=>"56"}
+  [1m[35mAccount Load (0.1ms)[0m  SELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = ? LIMIT 1  [["id", 56]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mCustomer Load (0.3ms)[0m  SELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1  [["id", 18]]
+  Rendered accounts/show.html.erb within layouts/application (6.7ms)
+Completed 200 OK in 283ms (Views: 279.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/accounts/56" for 127.0.0.1 at 2015-10-01 11:07:22 -0300
+Processing by AccountsController#show as HTML
+  Parameters: {"id"=>"56"}
+  [1m[36mAccount Load (0.2ms)[0m  [1mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = ? LIMIT 1[0m  [["id", 56]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered accounts/show.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 183ms (Views: 179.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/accounts/56" for 127.0.0.1 at 2015-10-01 11:07:48 -0300
+Processing by AccountsController#show as HTML
+  Parameters: {"id"=>"56"}
+  [1m[36mAccount Load (0.1ms)[0m  [1mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = ? LIMIT 1[0m  [["id", 56]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered accounts/show.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 177ms (Views: 174.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/accounts/56" for 127.0.0.1 at 2015-10-01 11:09:48 -0300
+Processing by AccountsController#show as HTML
+  Parameters: {"id"=>"56"}
+  [1m[36mAccount Load (0.1ms)[0m  [1mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = ? LIMIT 1[0m  [["id", 56]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered accounts/show.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 183ms (Views: 180.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/accounts/56" for 127.0.0.1 at 2015-10-01 11:10:03 -0300
+Processing by AccountsController#show as HTML
+  Parameters: {"id"=>"56"}
+  [1m[36mAccount Load (0.1ms)[0m  [1mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = ? LIMIT 1[0m  [["id", 56]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered accounts/show.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 169ms (Views: 166.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/accounts/56" for 127.0.0.1 at 2015-10-01 11:11:02 -0300
+Processing by AccountsController#show as HTML
+  Parameters: {"id"=>"56"}
+  [1m[36mAccount Load (0.2ms)[0m  [1mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = ? LIMIT 1[0m  [["id", 56]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered accounts/show.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 183ms (Views: 180.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.self-5cb012966a077b8577da392e21195d48c945a4b7301c1db79217bae33b5afa3f.css?body=1" for 127.0.0.1 at 2015-10-01 11:11:02 -0300
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2015-10-01 11:11:02 -0300
+
+
+Started GET "/assets/materialize/jquery.hammer.self-73fd69102f356b9abfc9ee242b19895f62454f42cfcfa1f066be71d2c8f41c7a.js?body=1" for 127.0.0.1 at 2015-10-01 11:11:02 -0300
+
+
+Started GET "/assets/materialize/jquery.easing.1.3.self-0170bc905fbddc075a56bdccce1be6a58f3713a14137b607ba9bd9f96fd7835f.js?body=1" for 127.0.0.1 at 2015-10-01 11:11:02 -0300
+
+
+Started GET "/assets/materialize/velocity.min.self-b01240ce1811a86e98a242cf1710553d1db34655f36b1e4ed745a7dc125db0ca.js?body=1" for 127.0.0.1 at 2015-10-01 11:11:02 -0300
+
+
+Started GET "/assets/materialize/animation.self-a1028b0bcf2e26331bedf7b90e81103f0707e69fdec488aa951de94b51987767.js?body=1" for 127.0.0.1 at 2015-10-01 11:11:02 -0300
+
+
+Started GET "/assets/materialize/hammer.min.self-bf8bdb0953b1a135f96716e362e1f7a8e64168c914fa77ca31973bb70e57a731.js?body=1" for 127.0.0.1 at 2015-10-01 11:11:02 -0300
+
+
+Started GET "/assets/materialize/global.self-6278d27c18237cf0b6fcd96a6bf27f58369de2c4d26bcb45ac9c49a50c0ad80a.js?body=1" for 127.0.0.1 at 2015-10-01 11:11:02 -0300
+
+
+Started GET "/assets/materialize/collapsible.self-bef6d527d6d38fc450d40f0e2733a1ccefc1817d34e041f69891c11b22642772.js?body=1" for 127.0.0.1 at 2015-10-01 11:11:02 -0300
+
+
+Started GET "/assets/materialize/dropdown.self-fae0917ba1dc6dc6cc00c9df451fd18ac72957677fb76b6291418398aaa3440c.js?body=1" for 127.0.0.1 at 2015-10-01 11:11:02 -0300
+
+
+Started GET "/assets/materialize/leanModal.self-4db1374f875e0a1a2ba3389d23cae8f6f0c2672e7e69aeab7645ed51d26e6915.js?body=1" for 127.0.0.1 at 2015-10-01 11:11:02 -0300
+
+
+Started GET "/assets/materialize/materialbox.self-697b2e84aa96b92b704f270bccaf72f5b0839012265d47e20695d6c7e54041b1.js?body=1" for 127.0.0.1 at 2015-10-01 11:11:02 -0300
+
+
+Started GET "/assets/materialize/parallax.self-7ac34f0f3dcef83deee116ea473a2770cec13e07c8e0dcce08cc2372bbe295d3.js?body=1" for 127.0.0.1 at 2015-10-01 11:11:02 -0300
+
+
+Started GET "/assets/materialize/tabs.self-8b03a508bef52283d6f302037fd672ca9d379a1901d72baa59418484071b8cbf.js?body=1" for 127.0.0.1 at 2015-10-01 11:11:02 -0300
+
+
+Started GET "/assets/materialize/tooltip.self-cd3548bc6934ec5af60f0e60c1146ebfeafac763b904e6f896119f1cd5c52a6e.js?body=1" for 127.0.0.1 at 2015-10-01 11:11:02 -0300
+
+
+Started GET "/assets/materialize/waves.self-26e9b9cfaa9ccbc292ed510f654bd279d69695f5337a14c9800b36e92f96735b.js?body=1" for 127.0.0.1 at 2015-10-01 11:11:02 -0300
+
+
+Started GET "/assets/materialize/toasts.self-e6883cac22ad22f88149b85c3e9efdee36fba56008586f550e6cb647386e0407.js?body=1" for 127.0.0.1 at 2015-10-01 11:11:02 -0300
+
+
+Started GET "/assets/materialize/sideNav.self-edaf1f17663d1cdb6a2c7ea0888ffc6b25a8d279e45ec96a63524893d7f99bfe.js?body=1" for 127.0.0.1 at 2015-10-01 11:11:02 -0300
+
+
+Started GET "/assets/materialize/scrollspy.self-9bd8d701ac90c813a0d051ab4943150bdb536d863646d8b349c42a88edb31cf8.js?body=1" for 127.0.0.1 at 2015-10-01 11:11:02 -0300
+
+
+Started GET "/assets/materialize/forms.self-3bb4c6691a15a59ee12a1577c137f5849d58265b45a01f2bd76dbd9a963083d4.js?body=1" for 127.0.0.1 at 2015-10-01 11:11:02 -0300
+
+
+Started GET "/assets/materialize/slider.self-b45587c52188bb778a060d2deee7c89f76474b48bc44559a0f8ca0b42a738b9b.js?body=1" for 127.0.0.1 at 2015-10-01 11:11:02 -0300
+
+
+Started GET "/assets/materialize/cards.self-e21f14b1b3c6987af4297d4da8ff5de59296ff2e37e2d062ec0c6d2dff4c8001.js?body=1" for 127.0.0.1 at 2015-10-01 11:11:02 -0300
+
+
+Started GET "/assets/materialize/pushpin.self-3e487290a48f23142c992c158b45cbd0be9c83de7c23abbb33b195954d1883cd.js?body=1" for 127.0.0.1 at 2015-10-01 11:11:02 -0300
+
+
+Started GET "/assets/materialize/buttons.self-e24986f138b11adc95249c0795e0357b52be8177ce2e894d41818868f51b09ed.js?body=1" for 127.0.0.1 at 2015-10-01 11:11:02 -0300
+
+
+Started GET "/assets/materialize/transitions.self-c527b205edfdd1f961487c4c7beaf83c335262accb4dff964341a86eb60fd2f2.js?body=1" for 127.0.0.1 at 2015-10-01 11:11:02 -0300
+
+
+Started GET "/assets/materialize/scrollFire.self-f18a16d9bb0e0177e01b0326e41c601a6a85bb6a00dbca34593f88a6c89770d2.js?body=1" for 127.0.0.1 at 2015-10-01 11:11:02 -0300
+
+
+Started GET "/assets/materialize/date_picker/picker.self-f7869dc9881d3874917e009ea6e30d68817b1bd1247665fb653e0f87393fb60f.js?body=1" for 127.0.0.1 at 2015-10-01 11:11:02 -0300
+
+
+Started GET "/assets/materialize/date_picker/picker.date.self-5924b278beda2df8570f137f72b37e2d0f516acbc11a0994d1abb74380f078ef.js?body=1" for 127.0.0.1 at 2015-10-01 11:11:02 -0300
+
+
+Started GET "/assets/materialize/character_counter.self-f3a78940ad5b851c1b7b79d86a5d5d9bdf0dc15e0e58e2a58b3eb57d845fbd37.js?body=1" for 127.0.0.1 at 2015-10-01 11:11:02 -0300
+
+
+Started GET "/assets/materialize-sprockets.self-a66b8b29b6eb6d8d6ac137234cb5d8f49f9bb4507a678c7f3ff97659a36ae3b0.js?body=1" for 127.0.0.1 at 2015-10-01 11:11:02 -0300
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2015-10-01 11:11:02 -0300
+
+
+Started GET "/assets/cash_payments.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-10-01 11:11:02 -0300
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2015-10-01 11:11:02 -0300
+
+
+Started GET "/accounts/56" for 127.0.0.1 at 2015-10-01 11:11:08 -0300
+Processing by AccountsController#show as HTML
+  Parameters: {"id"=>"56"}
+  [1m[36mAccount Load (0.1ms)[0m  [1mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = ? LIMIT 1[0m  [["id", 56]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered accounts/show.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 179ms (Views: 175.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/accounts/56" for 127.0.0.1 at 2015-10-01 11:11:58 -0300
+Processing by AccountsController#show as HTML
+  Parameters: {"id"=>"56"}
+  [1m[36mAccount Load (0.2ms)[0m  [1mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = ? LIMIT 1[0m  [["id", 56]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered accounts/show.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 170ms (Views: 166.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/accounts/56" for 127.0.0.1 at 2015-10-01 11:12:13 -0300
+Processing by AccountsController#show as HTML
+  Parameters: {"id"=>"56"}
+  [1m[36mAccount Load (0.2ms)[0m  [1mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = ? LIMIT 1[0m  [["id", 56]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered accounts/show.html.erb within layouts/application (5.4ms)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.3ms)
+
+ActionView::Template::Error (undefined method `name' for :customer:Symbol):
+    20:     </div>
+    21:     <div class="col s2" style="text-align: center;">
+    22:       <i class="material-icons prefix">supervisor_account</i>
+    23:       <%= f.text_field :customer.name, class: "center-align"  %>
+    24:     </div>
+    25:     <div class="col s12" style="text-align: center;">
+    26:       <i class="material-icons prefix">reorder</i>
+  app/views/accounts/show.html.erb:23:in `block in _app_views_accounts_show_html_erb__2980088899936940376_70244980442040'
+  app/views/accounts/show.html.erb:2:in `_app_views_accounts_show_html_erb__2980088899936940376_70244980442040'
+
+
+  Rendered /home/alisson/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.4ms)
+  Rendered /home/alisson/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.9ms)
+  Rendered /home/alisson/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /home/alisson/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (27.9ms)
+  Rendered /home/alisson/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /home/alisson/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/alisson/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/alisson/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/alisson/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (17.8ms)
+  Rendered /home/alisson/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/alisson/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/alisson/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (35.7ms)
+
+
+Started GET "/accounts/56" for 127.0.0.1 at 2015-10-01 11:12:19 -0300
+Processing by AccountsController#show as HTML
+  Parameters: {"id"=>"56"}
+  [1m[36mAccount Load (0.1ms)[0m  [1mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = ? LIMIT 1[0m  [["id", 56]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered accounts/show.html.erb within layouts/application (5.0ms)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.3ms)
+
+ActionView::Template::Error (undefined method `name' for :customer_id:Symbol):
+    20:     </div>
+    21:     <div class="col s2" style="text-align: center;">
+    22:       <i class="material-icons prefix">supervisor_account</i>
+    23:       <%= f.text_field :customer_id.name, class: "center-align"  %>
+    24:     </div>
+    25:     <div class="col s12" style="text-align: center;">
+    26:       <i class="material-icons prefix">reorder</i>
+  app/views/accounts/show.html.erb:23:in `block in _app_views_accounts_show_html_erb__2980088899936940376_70244970028360'
+  app/views/accounts/show.html.erb:2:in `_app_views_accounts_show_html_erb__2980088899936940376_70244970028360'
+
+
+  Rendered /home/alisson/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.2ms)
+  Rendered /home/alisson/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.9ms)
+  Rendered /home/alisson/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /home/alisson/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (27.3ms)
+  Rendered /home/alisson/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /home/alisson/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/alisson/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/alisson/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/alisson/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (17.7ms)
+  Rendered /home/alisson/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/alisson/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/alisson/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (36.7ms)
+
+
+Started GET "/accounts/56" for 127.0.0.1 at 2015-10-01 11:12:23 -0300
+Processing by AccountsController#show as HTML
+  Parameters: {"id"=>"56"}
+  [1m[36mAccount Load (0.1ms)[0m  [1mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = ? LIMIT 1[0m  [["id", 56]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered accounts/show.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 194ms (Views: 192.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/accounts/56" for 127.0.0.1 at 2015-10-01 11:12:55 -0300
+Processing by AccountsController#show as HTML
+  Parameters: {"id"=>"56"}
+  [1m[36mAccount Load (0.1ms)[0m  [1mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = ? LIMIT 1[0m  [["id", 56]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered accounts/show.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 294ms (Views: 291.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/accounts/56" for 127.0.0.1 at 2015-10-01 11:13:33 -0300
+Processing by AccountsController#show as HTML
+  Parameters: {"id"=>"56"}
+  [1m[36mAccount Load (0.1ms)[0m  [1mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = ? LIMIT 1[0m  [["id", 56]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered accounts/show.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 211ms (Views: 209.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/accounts/56" for 127.0.0.1 at 2015-10-01 11:14:10 -0300
+Processing by AccountsController#show as HTML
+  Parameters: {"id"=>"56"}
+  [1m[36mAccount Load (0.1ms)[0m  [1mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = ? LIMIT 1[0m  [["id", 56]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered accounts/show.html.erb within layouts/application (1.9ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.3ms)
+
+SyntaxError (/home/alisson/RailsApps/LanchoneteCanaa/app/views/accounts/show.html.erb:23: syntax error, unexpected tLABEL, expecting '='
+...( @ccount.customer.name, class: "center-align"  );@output_bu...
+...                               ^):
+  app/views/accounts/show.html.erb:23: syntax error, unexpected tLABEL, expecting '='
+
+
+  Rendered /home/alisson/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.8ms)
+  Rendered /home/alisson/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.9ms)
+  Rendered /home/alisson/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /home/alisson/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (28.0ms)
+  Rendered /home/alisson/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /home/alisson/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/alisson/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/alisson/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/alisson/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (17.6ms)
+  Rendered /home/alisson/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/alisson/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/alisson/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (35.0ms)
+
+
+Started GET "/accounts/56" for 127.0.0.1 at 2015-10-01 11:14:22 -0300
+Processing by AccountsController#show as HTML
+  Parameters: {"id"=>"56"}
+  [1m[36mAccount Load (0.1ms)[0m  [1mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = ? LIMIT 1[0m  [["id", 56]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered accounts/show.html.erb within layouts/application (1.4ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.2ms)
+
+SyntaxError (/home/alisson/RailsApps/LanchoneteCanaa/app/views/accounts/show.html.erb:23: syntax error, unexpected tLABEL, expecting '='
+...pend=( @ccount.customer, class: "center-align"  );@output_bu...
+...                               ^):
+  app/views/accounts/show.html.erb:23: syntax error, unexpected tLABEL, expecting '='
+
+
+  Rendered /home/alisson/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.3ms)
+  Rendered /home/alisson/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.1ms)
+  Rendered /home/alisson/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /home/alisson/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (27.7ms)
+  Rendered /home/alisson/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /home/alisson/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/alisson/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/alisson/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/alisson/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (17.7ms)
+  Rendered /home/alisson/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/alisson/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/alisson/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (35.0ms)
+
+
+Started GET "/accounts/56" for 127.0.0.1 at 2015-10-01 11:14:32 -0300
+Processing by AccountsController#show as HTML
+  Parameters: {"id"=>"56"}
+  [1m[36mAccount Load (0.1ms)[0m  [1mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = ? LIMIT 1[0m  [["id", 56]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered accounts/show.html.erb within layouts/application (1.9ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.3ms)
+
+SyntaxError (/home/alisson/RailsApps/LanchoneteCanaa/app/views/accounts/show.html.erb:23: syntax error, unexpected tLABEL, expecting '='
+...d=( @ccount.customer_id, class: "center-align"  );@output_bu...
+...                               ^):
+  app/views/accounts/show.html.erb:23: syntax error, unexpected tLABEL, expecting '='
+
+
+  Rendered /home/alisson/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.8ms)
+  Rendered /home/alisson/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.9ms)
+  Rendered /home/alisson/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /home/alisson/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (29.1ms)
+  Rendered /home/alisson/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /home/alisson/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/alisson/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/alisson/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/alisson/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (20.1ms)
+  Rendered /home/alisson/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/alisson/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/alisson/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (37.8ms)
+
+
+Started GET "/accounts/56" for 127.0.0.1 at 2015-10-01 11:14:39 -0300
+Processing by AccountsController#show as HTML
+  Parameters: {"id"=>"56"}
+  [1m[36mAccount Load (0.2ms)[0m  [1mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = ? LIMIT 1[0m  [["id", 56]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered accounts/show.html.erb within layouts/application (2.4ms)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.3ms)
+
+SyntaxError (/home/alisson/RailsApps/LanchoneteCanaa/app/views/accounts/show.html.erb:23: syntax error, unexpected tLABEL, expecting '='
+...pend=( @ccount.salesman, class: "center-align"  );@output_bu...
+...                               ^):
+  app/views/accounts/show.html.erb:23: syntax error, unexpected tLABEL, expecting '='
+
+
+  Rendered /home/alisson/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.4ms)
+  Rendered /home/alisson/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.3ms)
+  Rendered /home/alisson/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /home/alisson/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (28.4ms)
+  Rendered /home/alisson/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /home/alisson/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/alisson/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/alisson/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/alisson/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (17.5ms)
+  Rendered /home/alisson/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/alisson/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/alisson/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (43.4ms)
+
+
+Started GET "/accounts/56" for 127.0.0.1 at 2015-10-01 11:14:52 -0300
+Processing by AccountsController#show as HTML
+  Parameters: {"id"=>"56"}
+  [1m[36mAccount Load (0.2ms)[0m  [1mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = ? LIMIT 1[0m  [["id", 56]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered accounts/show.html.erb within layouts/application (4.1ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.3ms)
+
+ActionView::Template::Error (undefined method `salesman' for nil:NilClass):
+    20:     </div>
+    21:     <div class="col s2" style="text-align: center;">
+    22:       <i class="material-icons prefix">supervisor_account</i>
+    23:       <%= @ccount.salesman  %>
+    24:     </div>
+    25:     <div class="col s12" style="text-align: center;">
+    26:       <i class="material-icons prefix">reorder</i>
+  app/views/accounts/show.html.erb:23:in `block in _app_views_accounts_show_html_erb__2980088899936940376_70244979835440'
+  app/views/accounts/show.html.erb:2:in `_app_views_accounts_show_html_erb__2980088899936940376_70244979835440'
+
+
+  Rendered /home/alisson/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.1ms)
+  Rendered /home/alisson/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.9ms)
+  Rendered /home/alisson/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /home/alisson/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (26.7ms)
+  Rendered /home/alisson/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /home/alisson/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/alisson/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/alisson/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/alisson/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (17.7ms)
+  Rendered /home/alisson/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/alisson/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/alisson/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (34.8ms)
+
+
+Started GET "/accounts/new" for 127.0.0.1 at 2015-10-01 11:15:14 -0300
+Processing by AccountsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mCustomer Load (0.2ms)[0m  SELECT "customers".* FROM "customers"
+  Rendered accounts/_form.html.erb (1.7ms)
+  Rendered accounts/new.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 176ms (Views: 173.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/accounts" for 127.0.0.1 at 2015-10-01 11:15:32 -0300
+Processing by AccountsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mAccount Load (0.2ms)[0m  SELECT "accounts".* FROM "accounts"  ORDER BY "accounts"."created_at" DESC
+  [1m[36mCustomer Load (0.1ms)[0m  [1mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1[0m  [["id", 18]]
+  [1m[35mCustomer Load (0.1ms)[0m  SELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1  [["id", 17]]
+  [1m[36mCustomer Load (0.1ms)[0m  [1mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1[0m  [["id", 16]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1  [["id", 17]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1[0m  [["id", 16]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1  [["id", 16]]
+  Rendered accounts/index.html.erb within layouts/application (6.7ms)
+Completed 200 OK in 195ms (Views: 192.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/accounts/56" for 127.0.0.1 at 2015-10-01 11:15:33 -0300
+Processing by AccountsController#show as HTML
+  Parameters: {"id"=>"56"}
+  [1m[36mAccount Load (0.1ms)[0m  [1mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = ? LIMIT 1[0m  [["id", 56]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered accounts/show.html.erb within layouts/application (4.5ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.3ms)
+
+ActionView::Template::Error (undefined method `price' for nil:NilClass):
+    20:     </div>
+    21:     <div class="col s2" style="text-align: center;">
+    22:       <i class="material-icons prefix">supervisor_account</i>
+    23:       <%= @ccount.price  %>
+    24:     </div>
+    25:     <div class="col s12" style="text-align: center;">
+    26:       <i class="material-icons prefix">reorder</i>
+  app/views/accounts/show.html.erb:23:in `block in _app_views_accounts_show_html_erb__2980088899936940376_70244979063000'
+  app/views/accounts/show.html.erb:2:in `_app_views_accounts_show_html_erb__2980088899936940376_70244979063000'
+
+
+  Rendered /home/alisson/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (10.8ms)
+  Rendered /home/alisson/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.1ms)
+  Rendered /home/alisson/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /home/alisson/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (35.2ms)
+  Rendered /home/alisson/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.7ms)
+  Rendered /home/alisson/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.7ms)
+  Rendered /home/alisson/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.8ms)
+  Rendered /home/alisson/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.8ms)
+  Rendered /home/alisson/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (23.3ms)
+  Rendered /home/alisson/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /home/alisson/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.7ms)
+  Rendered /home/alisson/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (52.2ms)
+
+
+Started GET "/accounts" for 127.0.0.1 at 2015-10-01 11:16:12 -0300
+Processing by AccountsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mAccount Load (0.3ms)[0m  SELECT "accounts".* FROM "accounts"  ORDER BY "accounts"."created_at" DESC
+  [1m[36mCustomer Load (0.1ms)[0m  [1mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1[0m  [["id", 18]]
+  [1m[35mCustomer Load (0.2ms)[0m  SELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1  [["id", 17]]
+  [1m[36mCustomer Load (0.1ms)[0m  [1mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1[0m  [["id", 16]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1  [["id", 17]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1[0m  [["id", 16]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1  [["id", 16]]
+  Rendered accounts/index.html.erb within layouts/application (11.2ms)
+Completed 200 OK in 181ms (Views: 177.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/accounts" for 127.0.0.1 at 2015-10-01 11:16:40 -0300
+Processing by AccountsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mAccount Load (0.3ms)[0m  SELECT "accounts".* FROM "accounts"  ORDER BY "accounts"."created_at" DESC
+  [1m[36mCustomer Load (0.2ms)[0m  [1mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1[0m  [["id", 18]]
+  [1m[35mCustomer Load (0.1ms)[0m  SELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1  [["id", 17]]
+  [1m[36mCustomer Load (0.1ms)[0m  [1mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1[0m  [["id", 16]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1  [["id", 17]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1[0m  [["id", 16]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1  [["id", 16]]
+  Rendered accounts/index.html.erb within layouts/application (12.5ms)
+Completed 200 OK in 177ms (Views: 174.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/accounts" for 127.0.0.1 at 2015-10-01 11:16:42 -0300
+Processing by AccountsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mAccount Load (0.4ms)[0m  SELECT "accounts".* FROM "accounts"  ORDER BY "accounts"."created_at" DESC
+  [1m[36mCustomer Load (0.2ms)[0m  [1mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1[0m  [["id", 18]]
+  [1m[35mCustomer Load (0.2ms)[0m  SELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1  [["id", 17]]
+  [1m[36mCustomer Load (0.1ms)[0m  [1mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1[0m  [["id", 16]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1  [["id", 17]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1[0m  [["id", 16]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1  [["id", 16]]
+  Rendered accounts/index.html.erb within layouts/application (13.3ms)
+Completed 200 OK in 298ms (Views: 294.7ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/accounts" for 127.0.0.1 at 2015-10-01 11:16:43 -0300
+Processing by AccountsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mAccount Load (0.2ms)[0m  SELECT "accounts".* FROM "accounts"  ORDER BY "accounts"."created_at" DESC
+  [1m[36mCustomer Load (0.2ms)[0m  [1mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1[0m  [["id", 18]]
+  [1m[35mCustomer Load (0.1ms)[0m  SELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1  [["id", 17]]
+  [1m[36mCustomer Load (0.1ms)[0m  [1mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1[0m  [["id", 16]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1  [["id", 17]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1[0m  [["id", 16]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1  [["id", 16]]
+  Rendered accounts/index.html.erb within layouts/application (13.7ms)
+Completed 200 OK in 251ms (Views: 248.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/accounts" for 127.0.0.1 at 2015-10-01 11:16:45 -0300
+Processing by AccountsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mAccount Load (0.4ms)[0m  SELECT "accounts".* FROM "accounts"  ORDER BY "accounts"."created_at" DESC
+  [1m[36mCustomer Load (0.2ms)[0m  [1mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1[0m  [["id", 18]]
+  [1m[35mCustomer Load (0.2ms)[0m  SELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1  [["id", 17]]
+  [1m[36mCustomer Load (0.2ms)[0m  [1mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1[0m  [["id", 16]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1  [["id", 17]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1[0m  [["id", 16]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1  [["id", 16]]
+  Rendered accounts/index.html.erb within layouts/application (13.7ms)
+Completed 200 OK in 281ms (Views: 278.0ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/accounts" for 127.0.0.1 at 2015-10-01 11:16:55 -0300
+Processing by AccountsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mAccount Load (0.5ms)[0m  SELECT "accounts".* FROM "accounts"  ORDER BY "accounts"."created_at" DESC
+  [1m[36mCustomer Load (0.1ms)[0m  [1mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1[0m  [["id", 18]]
+  [1m[35mCustomer Load (0.2ms)[0m  SELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1  [["id", 17]]
+  [1m[36mCustomer Load (0.1ms)[0m  [1mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1[0m  [["id", 16]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1  [["id", 17]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1[0m  [["id", 16]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1  [["id", 16]]
+  Rendered accounts/index.html.erb within layouts/application (12.6ms)
+Completed 200 OK in 258ms (Views: 254.9ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/accounts" for 127.0.0.1 at 2015-10-01 11:18:06 -0300
+Processing by AccountsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mAccount Load (1.7ms)[0m  SELECT "accounts".* FROM "accounts"  ORDER BY "accounts"."created_at" DESC
+  [1m[36mCustomer Load (0.2ms)[0m  [1mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1[0m  [["id", 18]]
+  [1m[35mCustomer Load (0.1ms)[0m  SELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1  [["id", 17]]
+  [1m[36mCustomer Load (0.1ms)[0m  [1mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1[0m  [["id", 16]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1  [["id", 17]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1[0m  [["id", 16]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1  [["id", 16]]
+  Rendered accounts/index.html.erb within layouts/application (11.9ms)
+Completed 200 OK in 178ms (Views: 172.8ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/accounts" for 127.0.0.1 at 2015-10-01 11:20:17 -0300
+Processing by AccountsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mAccount Load (0.5ms)[0m  SELECT "accounts".* FROM "accounts"  ORDER BY "accounts"."created_at" DESC
+  [1m[36mCustomer Load (0.1ms)[0m  [1mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1[0m  [["id", 18]]
+  [1m[35mCustomer Load (0.1ms)[0m  SELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1  [["id", 17]]
+  [1m[36mCustomer Load (0.1ms)[0m  [1mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1[0m  [["id", 16]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1  [["id", 17]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1[0m  [["id", 16]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1  [["id", 16]]
+  Rendered accounts/index.html.erb within layouts/application (11.4ms)
+Completed 200 OK in 186ms (Views: 182.8ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/accounts" for 127.0.0.1 at 2015-10-01 11:20:39 -0300
+Processing by AccountsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mAccount Load (0.3ms)[0m  SELECT "accounts".* FROM "accounts"  ORDER BY "accounts"."created_at" DESC
+  [1m[36mCustomer Load (0.1ms)[0m  [1mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1[0m  [["id", 18]]
+  [1m[35mCustomer Load (0.1ms)[0m  SELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1  [["id", 17]]
+  [1m[36mCustomer Load (0.1ms)[0m  [1mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1[0m  [["id", 16]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1  [["id", 17]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1[0m  [["id", 16]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1  [["id", 16]]
+  Rendered accounts/index.html.erb within layouts/application (9.9ms)
+Completed 200 OK in 180ms (Views: 176.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/accounts" for 127.0.0.1 at 2015-10-01 11:21:22 -0300
+Processing by AccountsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mAccount Load (0.4ms)[0m  SELECT "accounts".* FROM "accounts"  ORDER BY "accounts"."created_at" DESC
+  [1m[36mCustomer Load (0.2ms)[0m  [1mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1[0m  [["id", 18]]
+  [1m[35mCustomer Load (0.1ms)[0m  SELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1  [["id", 17]]
+  [1m[36mCustomer Load (0.1ms)[0m  [1mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1[0m  [["id", 16]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1  [["id", 17]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1[0m  [["id", 16]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1  [["id", 16]]
+  Rendered accounts/index.html.erb within layouts/application (8.4ms)
+Completed 200 OK in 184ms (Views: 180.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/accounts" for 127.0.0.1 at 2015-10-01 11:21:51 -0300
+Processing by AccountsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mAccount Load (0.3ms)[0m  SELECT "accounts".* FROM "accounts"  ORDER BY "accounts"."created_at" DESC
+  [1m[36mCustomer Load (0.1ms)[0m  [1mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1[0m  [["id", 18]]
+  [1m[35mCustomer Load (0.2ms)[0m  SELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1  [["id", 17]]
+  [1m[36mCustomer Load (0.1ms)[0m  [1mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1[0m  [["id", 16]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1  [["id", 17]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1[0m  [["id", 16]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1  [["id", 16]]
+  Rendered accounts/index.html.erb within layouts/application (10.2ms)
+Completed 200 OK in 174ms (Views: 170.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/customers" for 127.0.0.1 at 2015-10-01 11:21:54 -0300
+Processing by CustomersController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mCustomer Load (0.3ms)[0m  SELECT "customers".* FROM "customers"  ORDER BY "customers"."name" ASC
+  Rendered customers/index.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 191ms (Views: 188.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/customers/new" for 127.0.0.1 at 2015-10-01 11:21:55 -0300
+Processing by CustomersController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered customers/_form.html.erb (1.3ms)
+  Rendered customers/new.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 161ms (Views: 158.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/accounts" for 127.0.0.1 at 2015-10-01 11:21:57 -0300
+Processing by AccountsController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mAccount Load (0.4ms)[0m  [1mSELECT "accounts".* FROM "accounts"  ORDER BY "accounts"."created_at" DESC[0m
+  [1m[35mCustomer Load (0.2ms)[0m  SELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1  [["id", 18]]
+  [1m[36mCustomer Load (0.1ms)[0m  [1mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1[0m  [["id", 17]]
+  [1m[35mCustomer Load (0.1ms)[0m  SELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1  [["id", 16]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1[0m  [["id", 17]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1  [["id", 16]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1[0m  [["id", 16]]
+  Rendered accounts/index.html.erb within layouts/application (9.7ms)
+Completed 200 OK in 176ms (Views: 172.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/accounts/new" for 127.0.0.1 at 2015-10-01 11:21:59 -0300
+Processing by AccountsController#new as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mCustomer Load (0.2ms)[0m  [1mSELECT "customers".* FROM "customers"[0m
+  Rendered accounts/_form.html.erb (1.9ms)
+  Rendered accounts/new.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 165ms (Views: 163.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/cash_payments" for 127.0.0.1 at 2015-10-01 11:22:01 -0300
+Processing by CashPaymentsController#index as HTML
+  [1m[35mCashPayment Load (0.2ms)[0m  SELECT "cash_payments".* FROM "cash_payments"  ORDER BY "cash_payments"."created_at" DESC
+  Rendered cash_payments/index.html.erb within layouts/application (1.4ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 184ms (Views: 183.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/customers" for 127.0.0.1 at 2015-10-01 11:22:04 -0300
+Processing by CustomersController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mCustomer Load (0.2ms)[0m  [1mSELECT "customers".* FROM "customers"  ORDER BY "customers"."name" ASC[0m
+  Rendered customers/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 183ms (Views: 181.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/accounts" for 127.0.0.1 at 2015-10-01 11:22:06 -0300
+Processing by AccountsController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mAccount Load (0.3ms)[0m  [1mSELECT "accounts".* FROM "accounts"  ORDER BY "accounts"."created_at" DESC[0m
+  [1m[35mCustomer Load (0.1ms)[0m  SELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1  [["id", 18]]
+  [1m[36mCustomer Load (0.1ms)[0m  [1mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1[0m  [["id", 17]]
+  [1m[35mCustomer Load (0.1ms)[0m  SELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1  [["id", 16]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1[0m  [["id", 17]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1  [["id", 16]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1[0m  [["id", 16]]
+  Rendered accounts/index.html.erb within layouts/application (7.3ms)
+Completed 200 OK in 172ms (Views: 169.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/cash_payments" for 127.0.0.1 at 2015-10-01 11:22:08 -0300
+Processing by CashPaymentsController#index as HTML
+  [1m[35mCashPayment Load (0.2ms)[0m  SELECT "cash_payments".* FROM "cash_payments"  ORDER BY "cash_payments"."created_at" DESC
+  Rendered cash_payments/index.html.erb within layouts/application (1.6ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 168ms (Views: 167.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/cash_payments/1" for 127.0.0.1 at 2015-10-01 11:22:14 -0300
+Processing by CashPaymentsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mCashPayment Load (0.2ms)[0m  SELECT  "cash_payments".* FROM "cash_payments" WHERE "cash_payments"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered cash_payments/show.html.erb within layouts/application (2.0ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 210ms (Views: 208.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/accounts" for 127.0.0.1 at 2015-10-01 11:22:18 -0300
+Processing by AccountsController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mAccount Load (0.3ms)[0m  [1mSELECT "accounts".* FROM "accounts"  ORDER BY "accounts"."created_at" DESC[0m
+  [1m[35mCustomer Load (0.1ms)[0m  SELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1  [["id", 18]]
+  [1m[36mCustomer Load (0.1ms)[0m  [1mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1[0m  [["id", 17]]
+  [1m[35mCustomer Load (0.1ms)[0m  SELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1  [["id", 16]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1[0m  [["id", 17]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1  [["id", 16]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1[0m  [["id", 16]]
+  Rendered accounts/index.html.erb within layouts/application (7.2ms)
+Completed 200 OK in 186ms (Views: 183.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/accounts/56/edit" for 127.0.0.1 at 2015-10-01 11:22:22 -0300
+Processing by AccountsController#edit as HTML
+  Parameters: {"id"=>"56"}
+  [1m[35mAccount Load (0.1ms)[0m  SELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = ? LIMIT 1  [["id", 56]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mCustomer Load (0.2ms)[0m  SELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1  [["id", 18]]
+  [1m[36mCustomer Load (0.2ms)[0m  [1mSELECT "customers".* FROM "customers"[0m
+  Rendered accounts/_form.html.erb (4.8ms)
+  Rendered accounts/edit.html.erb within layouts/application (7.2ms)
+Completed 200 OK in 223ms (Views: 220.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/accounts/56/edit" for 127.0.0.1 at 2015-10-01 11:22:39 -0300
+Processing by AccountsController#edit as HTML
+  Parameters: {"id"=>"56"}
+  [1m[35mAccount Load (0.2ms)[0m  SELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = ? LIMIT 1  [["id", 56]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mCustomer Load (0.2ms)[0m  SELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1  [["id", 18]]
+  [1m[36mCustomer Load (0.2ms)[0m  [1mSELECT "customers".* FROM "customers"[0m
+  Rendered accounts/_form.html.erb (4.4ms)
+  Rendered accounts/edit.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 171ms (Views: 167.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/customers" for 127.0.0.1 at 2015-10-01 11:22:44 -0300
+Processing by CustomersController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mCustomer Load (0.2ms)[0m  [1mSELECT "customers".* FROM "customers"  ORDER BY "customers"."name" ASC[0m
+  Rendered customers/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 185ms (Views: 183.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/customers/16" for 127.0.0.1 at 2015-10-01 11:22:46 -0300
+Processing by CustomersController#show as HTML
+  Parameters: {"id"=>"16"}
+  [1m[35mCustomer Load (0.2ms)[0m  SELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1  [["id", 16]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mAccount Load (0.1ms)[0m  SELECT "accounts".* FROM "accounts" WHERE "accounts"."customer_id" = ?  [["customer_id", 16]]
+  [1m[36mAccount Load (0.2ms)[0m  [1mSELECT "accounts".* FROM "accounts" WHERE "accounts"."customer_id" = ?  ORDER BY "accounts"."created_at" DESC[0m  [["customer_id", 16]]
+  Rendered customers/show.html.erb within layouts/application (6.7ms)
+Completed 200 OK in 180ms (Views: 177.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/customers/16" for 127.0.0.1 at 2015-10-01 11:22:56 -0300
+Processing by CustomersController#show as HTML
+  Parameters: {"id"=>"16"}
+  [1m[35mCustomer Load (0.1ms)[0m  SELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1  [["id", 16]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mAccount Load (0.1ms)[0m  SELECT "accounts".* FROM "accounts" WHERE "accounts"."customer_id" = ?  [["customer_id", 16]]
+  [1m[36mAccount Load (0.1ms)[0m  [1mSELECT "accounts".* FROM "accounts" WHERE "accounts"."customer_id" = ?  ORDER BY "accounts"."created_at" DESC[0m  [["customer_id", 16]]
+  Rendered customers/show.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 223ms (Views: 219.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/customers/16" for 127.0.0.1 at 2015-10-01 11:23:54 -0300
+Processing by CustomersController#show as HTML
+  Parameters: {"id"=>"16"}
+  [1m[35mCustomer Load (0.8ms)[0m  SELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1  [["id", 16]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered customers/show.html.erb within layouts/application (2.8ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.9ms)
+
+SyntaxError (/home/alisson/RailsApps/LanchoneteCanaa/app/views/customers/show.html.erb:79: syntax error, unexpected keyword_ensure, expecting end-of-input):
+  app/views/customers/show.html.erb:79: syntax error, unexpected keyword_ensure, expecting end-of-input
+
+
+  Rendered /home/alisson/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.4ms)
+  Rendered /home/alisson/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.9ms)
+  Rendered /home/alisson/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /home/alisson/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (27.6ms)
+  Rendered /home/alisson/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /home/alisson/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/alisson/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/alisson/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/alisson/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (17.6ms)
+  Rendered /home/alisson/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/alisson/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/alisson/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (35.6ms)
+
+
+Started GET "/customers/16" for 127.0.0.1 at 2015-10-01 11:24:03 -0300
+Processing by CustomersController#show as HTML
+  Parameters: {"id"=>"16"}
+  [1m[35mCustomer Load (0.1ms)[0m  SELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1  [["id", 16]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mAccount Load (0.2ms)[0m  SELECT "accounts".* FROM "accounts" WHERE "accounts"."customer_id" = ?  [["customer_id", 16]]
+  [1m[36mAccount Load (0.1ms)[0m  [1mSELECT "accounts".* FROM "accounts" WHERE "accounts"."customer_id" = ?  ORDER BY "accounts"."created_at" DESC[0m  [["customer_id", 16]]
+  Rendered customers/show.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 206ms (Views: 202.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/customers" for 127.0.0.1 at 2015-10-01 11:24:07 -0300
+Processing by CustomersController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mCustomer Load (0.2ms)[0m  [1mSELECT "customers".* FROM "customers"  ORDER BY "customers"."name" ASC[0m
+  Rendered customers/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 271ms (Views: 269.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/customers/16" for 127.0.0.1 at 2015-10-01 11:24:10 -0300
+Processing by CustomersController#show as HTML
+  Parameters: {"id"=>"16"}
+  [1m[35mCustomer Load (0.1ms)[0m  SELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1  [["id", 16]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mAccount Load (0.2ms)[0m  SELECT "accounts".* FROM "accounts" WHERE "accounts"."customer_id" = ?  [["customer_id", 16]]
+  [1m[36mAccount Load (0.2ms)[0m  [1mSELECT "accounts".* FROM "accounts" WHERE "accounts"."customer_id" = ?  ORDER BY "accounts"."created_at" DESC[0m  [["customer_id", 16]]
+  Rendered customers/show.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 177ms (Views: 173.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/customers/new" for 127.0.0.1 at 2015-10-01 11:24:18 -0300
+Processing by CustomersController#new as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered customers/_form.html.erb (1.1ms)
+  Rendered customers/new.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 159ms (Views: 157.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/accounts" for 127.0.0.1 at 2015-10-01 11:24:20 -0300
+Processing by AccountsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mAccount Load (0.3ms)[0m  SELECT "accounts".* FROM "accounts"  ORDER BY "accounts"."created_at" DESC
+  [1m[36mCustomer Load (0.1ms)[0m  [1mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1[0m  [["id", 18]]
+  [1m[35mCustomer Load (0.1ms)[0m  SELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1  [["id", 17]]
+  [1m[36mCustomer Load (0.1ms)[0m  [1mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1[0m  [["id", 16]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1  [["id", 17]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1[0m  [["id", 16]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1  [["id", 16]]
+  Rendered accounts/index.html.erb within layouts/application (9.8ms)
+Completed 200 OK in 181ms (Views: 178.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/accounts/56/edit" for 127.0.0.1 at 2015-10-01 11:24:23 -0300
+Processing by AccountsController#edit as HTML
+  Parameters: {"id"=>"56"}
+  [1m[36mAccount Load (0.2ms)[0m  [1mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = ? LIMIT 1[0m  [["id", 56]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mCustomer Load (0.1ms)[0m  [1mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1[0m  [["id", 18]]
+  [1m[35mCustomer Load (0.2ms)[0m  SELECT "customers".* FROM "customers"
+  Rendered accounts/_form.html.erb (3.2ms)
+  Rendered accounts/edit.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 244ms (Views: 241.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/accounts" for 127.0.0.1 at 2015-10-01 11:24:33 -0300
+Processing by AccountsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mAccount Load (0.4ms)[0m  SELECT "accounts".* FROM "accounts"  ORDER BY "accounts"."created_at" DESC
+  [1m[36mCustomer Load (0.1ms)[0m  [1mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1[0m  [["id", 18]]
+  [1m[35mCustomer Load (0.2ms)[0m  SELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1  [["id", 17]]
+  [1m[36mCustomer Load (0.2ms)[0m  [1mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1[0m  [["id", 16]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1  [["id", 17]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1[0m  [["id", 16]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1  [["id", 16]]
+  Rendered accounts/index.html.erb within layouts/application (8.7ms)
+Completed 200 OK in 174ms (Views: 170.7ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/accounts/new" for 127.0.0.1 at 2015-10-01 11:24:35 -0300
+Processing by AccountsController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mCustomer Load (0.2ms)[0m  SELECT "customers".* FROM "customers"
+  Rendered accounts/_form.html.erb (2.5ms)
+  Rendered accounts/new.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 174ms (Views: 172.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/customers" for 127.0.0.1 at 2015-10-01 11:24:37 -0300
+Processing by CustomersController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mCustomer Load (0.2ms)[0m  SELECT "customers".* FROM "customers"  ORDER BY "customers"."name" ASC
+  Rendered customers/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 179ms (Views: 177.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/accounts" for 127.0.0.1 at 2015-10-01 11:24:38 -0300
+Processing by AccountsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mAccount Load (0.4ms)[0m  SELECT "accounts".* FROM "accounts"  ORDER BY "accounts"."created_at" DESC
+  [1m[36mCustomer Load (0.1ms)[0m  [1mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1[0m  [["id", 18]]
+  [1m[35mCustomer Load (0.1ms)[0m  SELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1  [["id", 17]]
+  [1m[36mCustomer Load (0.1ms)[0m  [1mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1[0m  [["id", 16]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1  [["id", 17]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1[0m  [["id", 16]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1  [["id", 16]]
+  Rendered accounts/index.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 167ms (Views: 164.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/accounts" for 127.0.0.1 at 2015-10-01 11:25:29 -0300
+Processing by AccountsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mAccount Load (0.4ms)[0m  SELECT "accounts".* FROM "accounts"  ORDER BY "accounts"."created_at" DESC
+  [1m[36mCustomer Load (0.2ms)[0m  [1mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1[0m  [["id", 18]]
+  [1m[35mCustomer Load (0.1ms)[0m  SELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1  [["id", 17]]
+  [1m[36mCustomer Load (0.1ms)[0m  [1mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1[0m  [["id", 16]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1  [["id", 17]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1[0m  [["id", 16]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1  [["id", 16]]
+  Rendered accounts/index.html.erb within layouts/application (9.8ms)
+Completed 200 OK in 180ms (Views: 176.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/accounts" for 127.0.0.1 at 2015-10-01 11:25:46 -0300
+Processing by AccountsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mAccount Load (0.4ms)[0m  SELECT "accounts".* FROM "accounts"  ORDER BY "accounts"."created_at" DESC
+  [1m[36mCustomer Load (0.2ms)[0m  [1mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1[0m  [["id", 18]]
+  [1m[35mCustomer Load (0.2ms)[0m  SELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1  [["id", 17]]
+  [1m[36mCustomer Load (0.1ms)[0m  [1mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1[0m  [["id", 16]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1  [["id", 17]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1[0m  [["id", 16]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1  [["id", 16]]
+  Rendered accounts/index.html.erb within layouts/application (15.6ms)
+Completed 200 OK in 179ms (Views: 175.9ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/accounts" for 127.0.0.1 at 2015-10-01 11:25:59 -0300
+Processing by AccountsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mAccount Load (0.3ms)[0m  SELECT "accounts".* FROM "accounts"  ORDER BY "accounts"."created_at" DESC
+  [1m[36mCustomer Load (0.1ms)[0m  [1mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1[0m  [["id", 18]]
+  [1m[35mCustomer Load (0.1ms)[0m  SELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1  [["id", 17]]
+  [1m[36mCustomer Load (0.2ms)[0m  [1mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1[0m  [["id", 16]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1  [["id", 17]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1[0m  [["id", 16]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1  [["id", 16]]
+  Rendered accounts/index.html.erb within layouts/application (32.8ms)
+Completed 200 OK in 213ms (Views: 209.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/accounts/new" for 127.0.0.1 at 2015-10-01 11:26:12 -0300
+Processing by AccountsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mCustomer Load (0.2ms)[0m  SELECT "customers".* FROM "customers"
+  Rendered accounts/_form.html.erb (2.4ms)
+  Rendered accounts/new.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 170ms (Views: 166.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/cash_payments" for 127.0.0.1 at 2015-10-01 11:26:16 -0300
+Processing by CashPaymentsController#index as HTML
+  [1m[36mCashPayment Load (0.2ms)[0m  [1mSELECT "cash_payments".* FROM "cash_payments"  ORDER BY "cash_payments"."created_at" DESC[0m
+  Rendered cash_payments/index.html.erb within layouts/application (1.5ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Completed 200 OK in 163ms (Views: 162.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/cash_payments/1" for 127.0.0.1 at 2015-10-01 11:26:24 -0300
+Processing by CashPaymentsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCashPayment Load (0.2ms)[0m  [1mSELECT  "cash_payments".* FROM "cash_payments" WHERE "cash_payments"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered cash_payments/show.html.erb within layouts/application (1.5ms)
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Completed 200 OK in 224ms (Views: 222.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/cash_payments/1/edit" for 127.0.0.1 at 2015-10-01 11:26:28 -0300
+Processing by CashPaymentsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCashPayment Load (0.1ms)[0m  [1mSELECT  "cash_payments".* FROM "cash_payments" WHERE "cash_payments"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered cash_payments/_form.html.erb (1.0ms)
+  Rendered cash_payments/edit.html.erb within layouts/application (1.5ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Completed 200 OK in 188ms (Views: 186.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/cash_payments" for 127.0.0.1 at 2015-10-01 11:26:31 -0300
+Processing by CashPaymentsController#index as HTML
+  [1m[36mCashPayment Load (0.2ms)[0m  [1mSELECT "cash_payments".* FROM "cash_payments"  ORDER BY "cash_payments"."created_at" DESC[0m
+  Rendered cash_payments/index.html.erb within layouts/application (1.5ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Completed 200 OK in 179ms (Views: 177.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/cash_payments" for 127.0.0.1 at 2015-10-01 11:27:25 -0300
+Processing by CashPaymentsController#index as HTML
+  [1m[36mCashPayment Load (0.2ms)[0m  [1mSELECT "cash_payments".* FROM "cash_payments"  ORDER BY "cash_payments"."created_at" DESC[0m
+  Rendered cash_payments/index.html.erb within layouts/application (2.7ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Completed 200 OK in 184ms (Views: 182.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/cash_payments/1/edit" for 127.0.0.1 at 2015-10-01 11:27:28 -0300
+Processing by CashPaymentsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCashPayment Load (0.1ms)[0m  [1mSELECT  "cash_payments".* FROM "cash_payments" WHERE "cash_payments"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered cash_payments/_form.html.erb (2.4ms)
+  Rendered cash_payments/edit.html.erb within layouts/application (4.4ms)
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Completed 200 OK in 294ms (Views: 292.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/cash_payments/new" for 127.0.0.1 at 2015-10-01 11:27:34 -0300
+Processing by CashPaymentsController#new as HTML
+  Rendered cash_payments/_form.html.erb (1.2ms)
+  Rendered cash_payments/new.html.erb within layouts/application (1.9ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 170ms (Views: 169.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/customers" for 127.0.0.1 at 2015-10-01 11:27:42 -0300
+Processing by CustomersController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mCustomer Load (0.2ms)[0m  [1mSELECT "customers".* FROM "customers"  ORDER BY "customers"."name" ASC[0m
+  Rendered customers/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 165ms (Views: 163.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/customers/16" for 127.0.0.1 at 2015-10-01 11:27:45 -0300
+Processing by CustomersController#show as HTML
+  Parameters: {"id"=>"16"}
+  [1m[35mCustomer Load (0.1ms)[0m  SELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1  [["id", 16]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mAccount Load (0.1ms)[0m  SELECT "accounts".* FROM "accounts" WHERE "accounts"."customer_id" = ?  [["customer_id", 16]]
+  [1m[36mAccount Load (0.2ms)[0m  [1mSELECT "accounts".* FROM "accounts" WHERE "accounts"."customer_id" = ?  ORDER BY "accounts"."created_at" DESC[0m  [["customer_id", 16]]
+  Rendered customers/show.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 171ms (Views: 168.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/customers/new" for 127.0.0.1 at 2015-10-01 11:27:51 -0300
+Processing by CustomersController#new as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered customers/_form.html.erb (1.4ms)
+  Rendered customers/new.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 169ms (Views: 166.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/accounts" for 127.0.0.1 at 2015-10-01 11:27:52 -0300
+Processing by AccountsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mAccount Load (0.3ms)[0m  SELECT "accounts".* FROM "accounts"  ORDER BY "accounts"."created_at" DESC
+  [1m[36mCustomer Load (0.1ms)[0m  [1mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1[0m  [["id", 18]]
+  [1m[35mCustomer Load (0.1ms)[0m  SELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1  [["id", 17]]
+  [1m[36mCustomer Load (0.1ms)[0m  [1mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1[0m  [["id", 16]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1  [["id", 17]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1[0m  [["id", 16]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1  [["id", 16]]
+  Rendered accounts/index.html.erb within layouts/application (8.6ms)
+Completed 200 OK in 173ms (Views: 171.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/accounts" for 127.0.0.1 at 2015-10-01 11:27:54 -0300
+Processing by AccountsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mAccount Load (0.3ms)[0m  SELECT "accounts".* FROM "accounts"  ORDER BY "accounts"."created_at" DESC
+  [1m[36mCustomer Load (0.1ms)[0m  [1mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1[0m  [["id", 18]]
+  [1m[35mCustomer Load (0.1ms)[0m  SELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1  [["id", 17]]
+  [1m[36mCustomer Load (0.1ms)[0m  [1mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1[0m  [["id", 16]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1  [["id", 17]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1[0m  [["id", 16]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1  [["id", 16]]
+  Rendered accounts/index.html.erb within layouts/application (15.8ms)
+Completed 200 OK in 253ms (Views: 250.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/accounts" for 127.0.0.1 at 2015-10-01 11:27:56 -0300
+Processing by AccountsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mAccount Load (0.4ms)[0m  SELECT "accounts".* FROM "accounts"  ORDER BY "accounts"."created_at" DESC
+  [1m[36mCustomer Load (1.1ms)[0m  [1mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1[0m  [["id", 18]]
+  [1m[35mCustomer Load (0.1ms)[0m  SELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1  [["id", 17]]
+  [1m[36mCustomer Load (0.2ms)[0m  [1mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1[0m  [["id", 16]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1  [["id", 17]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1[0m  [["id", 16]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1  [["id", 16]]
+  Rendered accounts/index.html.erb within layouts/application (15.6ms)
+Completed 200 OK in 283ms (Views: 278.9ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/accounts/56/edit" for 127.0.0.1 at 2015-10-01 11:27:58 -0300
+Processing by AccountsController#edit as HTML
+  Parameters: {"id"=>"56"}
+  [1m[36mAccount Load (0.1ms)[0m  [1mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = ? LIMIT 1[0m  [["id", 56]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mCustomer Load (0.1ms)[0m  [1mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1[0m  [["id", 18]]
+  [1m[35mCustomer Load (0.2ms)[0m  SELECT "customers".* FROM "customers"
+  Rendered accounts/_form.html.erb (3.8ms)
+  Rendered accounts/edit.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 223ms (Views: 220.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/customers" for 127.0.0.1 at 2015-10-01 11:28:02 -0300
+Processing by CustomersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mCustomer Load (0.2ms)[0m  SELECT "customers".* FROM "customers"  ORDER BY "customers"."name" ASC
+  Rendered customers/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 166ms (Views: 163.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/customers/16" for 127.0.0.1 at 2015-10-01 11:28:03 -0300
+Processing by CustomersController#show as HTML
+  Parameters: {"id"=>"16"}
+  [1m[36mCustomer Load (0.2ms)[0m  [1mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1[0m  [["id", 16]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mAccount Load (0.2ms)[0m  [1mSELECT "accounts".* FROM "accounts" WHERE "accounts"."customer_id" = ?[0m  [["customer_id", 16]]
+  [1m[35mAccount Load (0.2ms)[0m  SELECT "accounts".* FROM "accounts" WHERE "accounts"."customer_id" = ?  ORDER BY "accounts"."created_at" DESC  [["customer_id", 16]]
+  Rendered customers/show.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 218ms (Views: 214.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/cash_payments" for 127.0.0.1 at 2015-10-01 11:28:06 -0300
+Processing by CashPaymentsController#index as HTML
+  [1m[36mCashPayment Load (0.2ms)[0m  [1mSELECT "cash_payments".* FROM "cash_payments"  ORDER BY "cash_payments"."created_at" DESC[0m
+  Rendered cash_payments/index.html.erb within layouts/application (1.4ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Completed 200 OK in 156ms (Views: 155.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/cash_payments/1" for 127.0.0.1 at 2015-10-01 11:28:10 -0300
+Processing by CashPaymentsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCashPayment Load (0.1ms)[0m  [1mSELECT  "cash_payments".* FROM "cash_payments" WHERE "cash_payments"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered cash_payments/show.html.erb within layouts/application (2.7ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Completed 200 OK in 224ms (Views: 222.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/customers" for 127.0.0.1 at 2015-10-01 11:28:44 -0300
+Processing by CustomersController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mCustomer Load (0.2ms)[0m  SELECT "customers".* FROM "customers"  ORDER BY "customers"."name" ASC
+  Rendered customers/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 182ms (Views: 179.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/customers/new" for 127.0.0.1 at 2015-10-01 11:28:45 -0300
+Processing by CustomersController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered customers/_form.html.erb (1.2ms)
+  Rendered customers/new.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 202ms (Views: 199.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/accounts" for 127.0.0.1 at 2015-10-01 11:28:47 -0300
+Processing by AccountsController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mAccount Load (0.2ms)[0m  [1mSELECT "accounts".* FROM "accounts"  ORDER BY "accounts"."created_at" DESC[0m
+  [1m[35mCustomer Load (0.1ms)[0m  SELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1  [["id", 18]]
+  [1m[36mCustomer Load (0.1ms)[0m  [1mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1[0m  [["id", 17]]
+  [1m[35mCustomer Load (0.2ms)[0m  SELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1  [["id", 16]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1[0m  [["id", 17]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1  [["id", 16]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1[0m  [["id", 16]]
+  Rendered accounts/index.html.erb within layouts/application (9.3ms)
+Completed 200 OK in 179ms (Views: 176.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/accounts" for 127.0.0.1 at 2015-10-01 11:28:48 -0300
+Processing by AccountsController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mAccount Load (0.2ms)[0m  [1mSELECT "accounts".* FROM "accounts"  ORDER BY "accounts"."created_at" DESC[0m
+  [1m[35mCustomer Load (0.1ms)[0m  SELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1  [["id", 18]]
+  [1m[36mCustomer Load (0.1ms)[0m  [1mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1[0m  [["id", 17]]
+  [1m[35mCustomer Load (0.1ms)[0m  SELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1  [["id", 16]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1[0m  [["id", 17]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1  [["id", 16]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1[0m  [["id", 16]]
+  Rendered accounts/index.html.erb within layouts/application (13.1ms)
+Completed 200 OK in 237ms (Views: 235.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/accounts" for 127.0.0.1 at 2015-10-01 11:28:50 -0300
+Processing by AccountsController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mAccount Load (0.2ms)[0m  [1mSELECT "accounts".* FROM "accounts"  ORDER BY "accounts"."created_at" DESC[0m
+  [1m[35mCustomer Load (0.2ms)[0m  SELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1  [["id", 18]]
+  [1m[36mCustomer Load (0.1ms)[0m  [1mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1[0m  [["id", 17]]
+  [1m[35mCustomer Load (0.1ms)[0m  SELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1  [["id", 16]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1[0m  [["id", 17]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1  [["id", 16]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1[0m  [["id", 16]]
+  Rendered accounts/index.html.erb within layouts/application (12.1ms)
+Completed 200 OK in 248ms (Views: 244.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/accounts/56/edit" for 127.0.0.1 at 2015-10-01 11:28:52 -0300
+Processing by AccountsController#edit as HTML
+  Parameters: {"id"=>"56"}
+  [1m[35mAccount Load (0.1ms)[0m  SELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = ? LIMIT 1  [["id", 56]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mCustomer Load (0.2ms)[0m  SELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1  [["id", 18]]
+  [1m[36mCustomer Load (0.5ms)[0m  [1mSELECT "customers".* FROM "customers"[0m
+  Rendered accounts/_form.html.erb (6.5ms)
+  Rendered accounts/edit.html.erb within layouts/application (7.4ms)
+Completed 200 OK in 263ms (Views: 259.5ms | ActiveRecord: 1.0ms)

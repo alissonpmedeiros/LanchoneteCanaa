@@ -1,31 +1,38 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Cash Payments</h1>
+<h3 class="text-align: center">Listing Cash Payments</h3>
 
-<table>
-  <thead>
-    <tr>
-      <th>Salesman</th>
-      <th>Price</th>
-      <th>Description</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
 
-  <tbody>
-    <% @cash_payments.each do |cash_payment| %>
-      <tr>
-        <td><%= cash_payment.salesman %></td>
-        <td><%= cash_payment.price %></td>
-        <td><%= cash_payment.description %></td>
-        <td><%= link_to 'Show', cash_payment %></td>
-        <td><%= link_to 'Edit', edit_cash_payment_path(cash_payment) %></td>
-        <td><%= link_to 'Destroy', cash_payment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+<ul class="collapsible" data-collapsible="accordion">
+  <% @cash_payments.each do |cash_payment| %>  
+    <li>
+      <div class="collapsible-header">
+        <div class="col s4">
+          <i class="material-icons">payment</i>
+          <%= link_to cash_payment.price, cash_payment %>
+        </div>
+        <div class="col s4">
+          <i class="material-icons">query_builder</i>
+          <%= link_to cash_payment.created_at, cash_payment %>
+        </div>
+        <div class="col s3">
+          <i class="material-icons">person_pin</i>
+          <%= link_to cash_payment.salesman, cash_payment %>
+        </div>
+        <div class="right">
+        <%= link_to edit_cash_payment_path(cash_payment) do %>
+          <i class="material-icons">view_headline</i>
+        <%end%>
+      </div>
+      </div>
+      <div class="collapsible-body">
+        <p>
+          Description:
+          <%= cash_payment.description %>
+        </p>
+      </div>
+    </li>
+  <% end %>  
+</ul>
 
-<br>
-
-<%= link_to 'New Cash payment', new_cash_payment_path %>
+<a href="<%= new_cash_payment_path %>" class="waves-effect waves-light btn" name="action">New Payment</a>
