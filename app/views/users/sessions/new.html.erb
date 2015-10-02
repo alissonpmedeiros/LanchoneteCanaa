@@ -1,4 +1,4 @@
-<h2>Log in</h2>
+<h3 class="text-origin: center">Log in</h3>
 
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
   
@@ -10,7 +10,7 @@
           <div class="col s12 m4 l2"><p></p></div>
           <div class="input-field col s12 m4 l8">
             <i class="material-icons prefix">email</i>
-            <%= f.email_field :email, autofocus: true %>
+            <%= f.email_field :email %>
             <label for="icon_prefix"><%= :email %></label>  
           </div>
           <div class="col s12 m4 l2"><p></p></div>

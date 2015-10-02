@@ -21,10 +21,18 @@
           <i class="material-icons">phone</i>
             <%= link_to customer.phone, customer %>
         </div>
-        <div class="col s1">
+        <div class="right">
+          <%= link_to edit_customer_path(customer) do %>
+            <i class="material-icons">view_headline</i>
+          <%end%>
+
           <%= link_to controller: "accounts", action: "new", customer: customer do %>
             <i class="material-icons">payment</i>
           <%end%>
+          
+
+
+          
           
         </div>
       </div>

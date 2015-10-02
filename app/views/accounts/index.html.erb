@@ -9,19 +9,19 @@
     <div class="collapsible-header">
       <div class="col s3">
         <i class="material-icons">payment</i>
-        <%= link_to account.price %>
+        <%= account.price %>
       </div>
       <div class="col s3">
         <i class="material-icons">settings_ethernet</i>
-        <%= link_to status(account.status) %>
+        <%= status(account.status) %>
       </div>
       <div class="col s3">
         <i class="material-icons">person_pin</i>
-        <%= link_to account.salesman %>
+        <%= account.salesman %>
       </div>
       <div class="col s2">
         <i class="material-icons">contact_phone</i>
-        <%= link_to account.customer.name %>
+        <%= account.customer.name %>
       </div>
       <div class="right">
         <%= link_to edit_account_path(account) do %>
