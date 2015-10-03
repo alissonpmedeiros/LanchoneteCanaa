@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+#Hansak
+gem 'ransack'
 #Devise
 gem 'devise'
 #Materialize
