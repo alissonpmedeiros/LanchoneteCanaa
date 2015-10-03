@@ -4,7 +4,11 @@ class CustomersController < ApplicationController
   # GET /customers
   # GET /customers.json
   def index
-    @customers = Customer.all.order(:name)
+    if params[:search]
+      @customers = Customer.order(:name).search(params[:search])
+    else
+      @customers = Customer.order(:name)
+    end
     #@customers = Customer.all.includes(:accounts)
   end
 
