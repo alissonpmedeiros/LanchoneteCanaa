@@ -4,7 +4,7 @@ class CashPaymentsController < ApplicationController
   # GET /cash_payments
   # GET /cash_payments.json
   def index
-    @cash_payments = CashPayment.all.order(created_at: :desc)
+    @cash_payments = CashPayment.all.order(created_at: :desc).paginate(:page => params[:page], :per_page => 5)
   end
 
   # GET /cash_payments/1

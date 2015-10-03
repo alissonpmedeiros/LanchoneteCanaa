@@ -5,7 +5,7 @@ class AccountsController < ApplicationController
   # GET /accounts
   # GET /accounts.json
   def index
-    @accounts = Account.all.order(created_at: :desc)
+    @accounts = Account.all.order(created_at: :desc).paginate(:page => params[:page], :per_page => 5)
   end
 
   # GET /accounts/1

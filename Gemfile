@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+#Pagination using Materialize
+gem 'will_paginate-materialize'
 #Hansak
 gem 'ransack'
 #Devise
