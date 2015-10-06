@@ -29,9 +29,11 @@
           <li><a href="<%= cash_payments_path %>">Cash Payments</a></li>
 
           <li><a href="<%= new_cash_payment_path %>">New Payment</a></li>
+     
           <%if current_user.admin? %>
             <li><a href="<%= rails_admin_path %>">Dashboard</a></li>
           <%end%>
+          
           <li><a data-method="delete" href="<%= destroy_user_session_path %>"><i class="material-icons">power_settings_new</i></a></li>
 
         <% else %>
