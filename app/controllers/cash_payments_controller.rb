@@ -1,6 +1,6 @@
 class CashPaymentsController < ApplicationController
   before_action :set_cash_payment, only: [:show, :edit, :update, :destroy]
-
+  before_action :authenticate_user!
   # GET /cash_payments
   # GET /cash_payments.json
   def index

@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+<h4 class="text-align: center">Listing Purchases</h4>
+<ul class="collapsible" data-collapsible="accordion">
+  <% @purchases.each do |purchase| %>
+    <li>
+      <div class="collapsible-header">
+        <div class="col s5">
+          <i class="material-icons">payment</i>
+          <%= link_to purchase.price, purchase %>  
+        </div>
+        <div class="col s4">
+          <i class="material-icons">query_builder</i>
+          <%= link_to purchase.created_at, purchase%>
+        </div>
+        <div class="right"> 
+          <%= link_to edit_purchase_path(purchase) do %>
+            <i class="material-icons">view_headline</i>  
+          <%end%>
+        </div>
+      </div>
+      <div class="collapsible-body">
+        <p>
+          Description:
+          <%= purchase.description %>
+        </p>
+      </div>
+    </li>
+  <%end%>
+</ul>
+<%= will_paginate @purchases %>
+<a href="<%= new_purchase_path %>" class="btn waves-effect waves-light" name="action">New Purchase</a>

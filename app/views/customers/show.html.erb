@@ -38,18 +38,21 @@
     <% @customer.accounts.order(created_at: :desc).each do |account| %>
       <li>
         <div class="collapsible-header">
-          <div class="col s4">
+          <div class="col s3">
             <i class="material-icons">payment</i>
               <%= account.price %>
-          </div>
-          <div class="col s4">
-            <i class="material-icons">query_builder</i>
-              <%= account.created_at %>
           </div>
           <div class="col s3">
             <i class="material-icons">settings_ethernet</i>
               <%= status(account.status) %>
-                
+          </div>
+          <div class="col s3">
+            <i class="material-icons">query_builder</i>
+              <%= account.created_at %>
+          </div>
+          <div class="col s2">
+            <i class="material-icons">supervisor_account</i>
+              <%= account.salesman %>
           </div>
           <div class="right"> 
             <%= link_to edit_account_path(account) do %>
@@ -59,7 +62,7 @@
         </div>
         <div class="collapsible-body">
             <p>
-              <%= account.salesman %> <br>
+              Description:
               <%= account.description %>
             </p>
           </div>
