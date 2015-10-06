@@ -5,7 +5,7 @@ class CustomersController < ApplicationController
   # GET /customers.json
   def index
     @q = Customer.ransack(params[:q])
-    @customers = @q.result.includes(:accounts).paginate(:page => params[:page], :per_page => 5)
+    @customers = @q.result.order(:name).includes(:accounts).paginate(:page => params[:page], :per_page => 5)
 
     #@customers = Customer.order(:name).search(params[:search])
     #@customers = Customer.all.includes(:accounts)

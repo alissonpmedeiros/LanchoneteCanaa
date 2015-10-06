@@ -72,7 +72,7 @@ class AccountsController < ApplicationController
     end
 
     def set_customers
-      @customers = Customer.all
+      @customers = Customer.order(:name)
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
