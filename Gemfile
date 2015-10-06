@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+#rails_admin
+gem 'rails_admin'
 #Pagination using Materialize
 gem 'will_paginate-materialize'
 #Hansak

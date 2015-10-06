@@ -1,9 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-  
-
   <title>LanchoneteCanaa</title>
+
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
@@ -30,9 +29,9 @@
           <li><a href="<%= cash_payments_path %>">Cash Payments</a></li>
 
           <li><a href="<%= new_cash_payment_path %>">New Payment</a></li>
-
-          <li><a href="#">Dashboard</a></li>
-
+          <%if current_user.admin? %>
+            <li><a href="<%= rails_admin_path %>">Dashboard</a></li>
+          <%end%>
           <li><a data-method="delete" href="<%= destroy_user_session_path %>"><i class="material-icons">power_settings_new</i></a></li>
 
         <% else %>
@@ -75,16 +74,5 @@
   	  <%= yield %>
   	</div>
   </div>
-  
-  <script>
-   $(document).ready(function(){
-      $(".button-collapse").sideNav();
-      $('.slider').slider({
-        full_width: true,
-        indicators: false
-      });
-    });
-  </script> 
-
 </body>
 </html>
