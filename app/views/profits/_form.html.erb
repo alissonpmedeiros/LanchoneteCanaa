@@ -1,0 +1,64 @@
+<%= form_for(@profit) do |f| %>
+  <% if @profit.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@profit.errors.count, "error") %> prohibited this profit from being saved:</h2>
+
+      <ul>
+      <% @profit.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <br><br><br>
+  <div class="container">
+    <div class="row">
+      <form class="col s12">
+        <div class="row">
+          <div class="col s12 m4 l2"><p></p></div>
+          <div class="col s12 m4 l1">
+            <p>
+              <i class="material-icons prefix">swap_vert</i>          
+            </p>
+          </div>
+          <div class="col s12 m4 l7">
+            <p>
+              <%= f.select(:option, options_for_select([["Day", "Day"], ["Week", "Week"], ["Month", "Month"], ["Year", "Year"]], @profit.option), {include_blank: false}, class: "browser-default") %>          
+            </p>
+          </div>
+          <div class="col s12 m4 l2"><p></p></div>
+        </div>
+
+        <div class="row">
+          <div class="col s12 m4 l2"><p></p></div>
+          <div class="input-field col s12 m4 l8">
+            <p>
+              <i class="material-icons prefix">today</i>
+              <%= f.text_field :date, class: "datepicker" %>
+            </p>
+          </div>
+          <div class="col s12 m4 l2"><p></p></div>
+        </div>
+
+        <div class="row">
+          <div class="col s12 m4 l2"><p></p></div>
+          <div class="col s12 m4 l8">
+            <p>
+              <button class="btn waves-effect waves-light" name="action" type="submit">
+                Submit
+              </button>
+            </p>
+          </div>
+          <div class="col s12 m4 l2"><p></p></div>
+        </div>
+      </form>
+    </div>
+  </div>
+<% end %>
+
+<script>
+  $('.datepicker').pickadate({
+    selectMonths: true, // Creates a dropdown to control month
+    selectYears: 5 // Creates a dropdown of 15 years to control year
+  });
+</script>

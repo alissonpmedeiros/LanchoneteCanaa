@@ -11,8 +11,8 @@
 </head>
 <body>
    <nav>
-    <div class="nav-wrapper black">
-      <a href="<%= root_path %>" class="brand-logo">Início</a>
+    <div class="nav-wrapper z-depth-2 black">
+      <a href="<%= root_path %>" class="brand-logo">Start</a>
 
       <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
       <ul class="right hide-on-med-and-down">
@@ -32,6 +32,7 @@
      
           <%if current_user.admin? %>
             <li><a href="<%= purchases_path %>">Purchases</a></li>
+            <li><a href="<%= profits_path %>">Profit</a></li>
             <li><a href="<%= rails_admin_path %>">Dashboard</a></li>
           <%end%>
           
@@ -71,6 +72,9 @@
       </ul>
     </div>
   </nav>
+  <script>
+     $(".button-collapse").sideNav();
+  </script>
 
   <div class="row">
   	<div class="col m10 offset-m1">

@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+<h4 class="text-align: center">Option: <%= @profit.option %> | Date: <%= @profit.date %></h4>
+
+<div class="card-panel hoverable">
+	<div class="row">
+		<div class="col s3" style="text-align: center">
+			<h6 class="text-align: center">Total sales</h6>
+			<input type="text" class="center-align"
+			value="<%= @total_sales %>"
+			name="profit[total_sales]"
+			id="profit_total_sales">
+		</div>
+		<div class="col s3" style="text-align: center">
+			<h6 class="text-align: center">Total collected</h6>
+			<input type="text" class="center-align"
+			value="<%= @total_collected %>"
+			name="profit[total_collected]"
+			id="profit_total_collected">
+		</div>
+		<div class="col s3" style="text-align: center">
+			<h6 class="text-align: center">Total spun</h6>
+			<input type="text" class="center-align"
+			value="<%= @total_spun %>"
+			name="profit[total_spun]"
+			id="profit_total_spun">
+		</div>
+		<div class="col s3" style="text-align: center">
+			<h6 class="text-align: center">Total purchases</h6>
+			<input type="text" class="center-align"
+			value="<%= @total_purchases %>"
+			name="profit[total_purchases]"
+			id="profit_total_purchases">
+		</div>
+	</div>
+</div>
+
+
+<%= link_to 'Edit', edit_profit_path(@profit) %> |
+<%= link_to 'Back', profits_path %>
