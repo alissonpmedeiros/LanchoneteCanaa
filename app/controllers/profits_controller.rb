@@ -4,6 +4,7 @@ class ProfitsController < ApplicationController
   # GET /profits
   # GET /profits.json
   def index
+    Profit.destroy_all
     redirect_to new_profit_path
   end
 
@@ -29,7 +30,7 @@ class ProfitsController < ApplicationController
     @total_spun = Profit.total_spun(@accounts)
     @total_spun = Profit.total_spun(@accounts)
     @total_purchases = Profit.total_purchases(@purchases)
-    Profit.destroy_all
+    
   end
 
   # GET /profits/new

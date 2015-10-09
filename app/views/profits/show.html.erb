@@ -1,4 +1,3 @@
-<p id="notice"><%= notice %></p>
 <h4 class="text-align: center">Option: <%= @profit.option %> | Date: <%= @profit.date %></h4>
 
 <div class="card-panel hoverable">
@@ -34,6 +33,4 @@
 	</div>
 </div>
 
-
-<%= link_to 'Edit', edit_profit_path(@profit) %> |
-<%= link_to 'Back', profits_path %>
+<a href="<%= profits_path %>" class="waves-effect waves-light btn" name="action">Back</a>

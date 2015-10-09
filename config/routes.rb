@@ -1,15 +1,16 @@
 Rails.application.routes.draw do
-  resources :profits
-  resources :purchases
-  mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
-
-  devise_for :users
+  
   root 'welcome#index'
+  devise_for :users, :skip => :registrations
+
+  mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
 
   get 'customers/pay_off'
   resources :accounts
   resources :customers
   resources :cash_payments
+  resources :profits
+  resources :purchases
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

@@ -40,9 +40,6 @@
 
         <% else %>
           <li><a href="<%= new_user_session_path %>"><i class="material-icons">perm_identity</i></a></li>
-
-          <li><a href="<%= new_user_registration_path %>"><i class="material-icons">library_add</i></a></li>
-
         <% end %>
       </ul>
       <ul class="side-nav" id="mobile-demo">
@@ -58,16 +55,17 @@
           <li><a href="<%= cash_payments_path %>">Cash Payments</a></li>
 
           <li><a href="<%= new_cash_payment_path %>">New Payment</a></li>
-
-          <li><a href="#">Dashboard</a></li>
-
+     
+          <%if current_user.admin? %>
+            <li><a href="<%= purchases_path %>">Purchases</a></li>
+            <li><a href="<%= profits_path %>">Profit</a></li>
+            <li><a href="<%= rails_admin_path %>">Dashboard</a></li>
+          <%end%>
+          
           <li><a data-method="delete" href="<%= destroy_user_session_path %>"><i class="material-icons">power_settings_new</i></a></li>
 
         <% else %>
           <li><a href="<%= new_user_session_path %>"><i class="material-icons">perm_identity</i></a></li>
-
-          <li><a href="<%= new_user_registration_path %>"><i class="material-icons">library_add</i></a></li>
-
         <% end %> 
       </ul>
     </div>
