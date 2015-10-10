@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+#pundit
+gem 'pundit'
 #rails_admin
 gem 'rails_admin'
 #Pagination using Materialize

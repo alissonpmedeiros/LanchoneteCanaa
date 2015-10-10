@@ -5,27 +5,31 @@ class PurchasesController < ApplicationController
   # GET /purchases.json
   def index
     @purchases = Purchase.order(created_at: :desc).paginate(:page => params[:page], :per_page => 5)
+    authorize @purchases
   end
 
   # GET /purchases/1
   # GET /purchases/1.json
   def show
+    authorize @purchase
   end
 
   # GET /purchases/new
   def new
     @purchase = Purchase.new
+    authorize @purchase
   end
 
   # GET /purchases/1/edit
   def edit
+    authorize @purchase
   end
 
   # POST /purchases
   # POST /purchases.json
   def create
     @purchase = Purchase.new(purchase_params)
-
+    authorize @purchase
     respond_to do |format|
       if @purchase.save
         format.html { redirect_to @purchase, notice: 'Purchase was successfully created.' }
@@ -40,6 +44,7 @@ class PurchasesController < ApplicationController
   # PATCH/PUT /purchases/1
   # PATCH/PUT /purchases/1.json
   def update
+    authorize @purchase
     respond_to do |format|
       if @purchase.update(purchase_params)
         format.html { redirect_to @purchase, notice: 'Purchase was successfully updated.' }
@@ -54,6 +59,7 @@ class PurchasesController < ApplicationController
   # DELETE /purchases/1
   # DELETE /purchases/1.json
   def destroy
+    authorize @purchase
     @purchase.destroy
     respond_to do |format|
       format.html { redirect_to purchases_url, notice: 'Purchase was successfully destroyed.' }

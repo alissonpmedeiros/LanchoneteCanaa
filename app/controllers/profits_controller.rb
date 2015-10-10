@@ -11,6 +11,7 @@ class ProfitsController < ApplicationController
   # GET /profits/1
   # GET /profits/1.json
   def show
+    authorize @profit
     if @profit.option == 'Day'
       @accounts = Account.search_day(@profit.date)
       @purchases = Purchase.search_day(@profit.date)
@@ -36,17 +37,19 @@ class ProfitsController < ApplicationController
   # GET /profits/new
   def new
     @profit = Profit.new
+    authorize @profit
   end
 
   # GET /profits/1/edit
   def edit
+    authorize @profit
   end
 
   # POST /profits
   # POST /profits.json
   def create
     @profit = Profit.new(profit_params)
-
+    authorize @profit
     respond_to do |format|
       if @profit.save
         format.html { redirect_to @profit, notice: 'Profit was successfully created.' }
@@ -61,6 +64,7 @@ class ProfitsController < ApplicationController
   # PATCH/PUT /profits/1
   # PATCH/PUT /profits/1.json
   def update
+    authorize @profit
     respond_to do |format|
       if @profit.update(profit_params)
         format.html { redirect_to @profit, notice: 'Profit was successfully updated.' }
@@ -75,6 +79,7 @@ class ProfitsController < ApplicationController
   # DELETE /profits/1
   # DELETE /profits/1.json
   def destroy
+    authorize @profit
     @profit.destroy
     respond_to do |format|
       format.html { redirect_to profits_url, notice: 'Profit was successfully destroyed.' }

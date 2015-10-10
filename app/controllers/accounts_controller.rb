@@ -6,16 +6,19 @@ class AccountsController < ApplicationController
   # GET /accounts.json
   def index
     @accounts = Account.all.order(created_at: :desc).paginate(:page => params[:page], :per_page => 5)
+    authorize @accounts
   end
 
   # GET /accounts/1
   # GET /accounts/1.json
   def show
+    authorize @account
   end
 
   # GET /accounts/new
   def new
     @account = Account.new
+    authorize @account
     if params[:customer]
       @account.customer = Customer.find(params[:customer])
     end
@@ -23,13 +26,14 @@ class AccountsController < ApplicationController
 
   # GET /accounts/1/edit
   def edit
+    authorize @account
   end
 
   # POST /accounts
   # POST /accounts.json
   def create
     @account = Account.new(account_params)
-
+    authorize @account
     respond_to do |format|
       if @account.save
         format.html { redirect_to @account, notice: 'Account was successfully created.' }
@@ -44,6 +48,7 @@ class AccountsController < ApplicationController
   # PATCH/PUT /accounts/1
   # PATCH/PUT /accounts/1.json
   def update
+    authorize @account
     respond_to do |format|
       if @account.update(account_params)
         format.html { redirect_to @account, notice: 'Account was successfully updated.' }
@@ -58,6 +63,7 @@ class AccountsController < ApplicationController
   # DELETE /accounts/1
   # DELETE /accounts/1.json
   def destroy
+    authorize @account
     @account.destroy
     respond_to do |format|
       format.html { redirect_to accounts_url, notice: 'Account was successfully destroyed.' }

@@ -5,27 +5,31 @@ class CashPaymentsController < ApplicationController
   # GET /cash_payments.json
   def index
     @cash_payments = CashPayment.all.order(created_at: :desc).paginate(:page => params[:page], :per_page => 5)
+    authorize @cash_payments
   end
 
   # GET /cash_payments/1
   # GET /cash_payments/1.json
   def show
+    authorize @cash_payment
   end
 
   # GET /cash_payments/new
   def new
     @cash_payment = CashPayment.new
+    authorize @cash_payment
   end
 
   # GET /cash_payments/1/edit
   def edit
+    authorize @cash_payment
   end
 
   # POST /cash_payments
   # POST /cash_payments.json
   def create
     @cash_payment = CashPayment.new(cash_payment_params)
-
+    authorize @cash_payment
     respond_to do |format|
       if @cash_payment.save
         format.html { redirect_to @cash_payment, notice: 'Cash payment was successfully created.' }
@@ -40,6 +44,7 @@ class CashPaymentsController < ApplicationController
   # PATCH/PUT /cash_payments/1
   # PATCH/PUT /cash_payments/1.json
   def update
+    authorize @cash_payment
     respond_to do |format|
       if @cash_payment.update(cash_payment_params)
         format.html { redirect_to @cash_payment, notice: 'Cash payment was successfully updated.' }
@@ -54,6 +59,7 @@ class CashPaymentsController < ApplicationController
   # DELETE /cash_payments/1
   # DELETE /cash_payments/1.json
   def destroy
+    authorize @cash_payment
     @cash_payment.destroy
     respond_to do |format|
       format.html { redirect_to cash_payments_url, notice: 'Cash payment was successfully destroyed.' }
