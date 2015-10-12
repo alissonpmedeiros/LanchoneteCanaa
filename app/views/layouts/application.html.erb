@@ -19,17 +19,10 @@
 
         <% if user_signed_in? %>      
           <li><a href="<%= customers_path %>">Customers</a></li>
-
-          <li><a href="<%= new_customer_path %>">New Customer</a></li>
-
           <li><a href="<%= accounts_path %>">Accounts</a></li>
-          
-          <li><a href="<%= new_account_path %>">New Account</a></li>
 
           <li><a href="<%= cash_payments_path %>">Cash Payments</a></li>
-
-          <li><a href="<%= new_cash_payment_path %>">New Payment</a></li>
-     
+          
           <%if current_user.admin? %>
             <li><a href="<%= purchases_path %>">Purchases</a></li>
             <li><a href="<%= profits_path %>">Profit</a></li>

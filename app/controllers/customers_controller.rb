@@ -6,7 +6,7 @@ class CustomersController < ApplicationController
   def index
     @q = Customer.ransack(params[:q])
     @customers = @q.result.order(:name).includes(:accounts).paginate(:page => params[:page], :per_page => 5)
-    #authorize @customers
+    authorize @customers
     #@customers = Customer.order(:name).search(params[:search])
     #@customers = Customer.all.includes(:accounts)
   end
@@ -71,12 +71,13 @@ class CustomersController < ApplicationController
   end
 
   def pay_off
-    authorize @customer
     if params[:customer]
       @customer = Customer.find(params[:customer])
+      authorize @customer
       Customer.pay_off(@customer)
       redirect_to @customer
     end
+    
   end
 
   private

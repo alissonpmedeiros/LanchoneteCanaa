@@ -20,7 +20,7 @@ class CustomerPolicy < ApplicationPolicy
   def destroy?
   	user.admin?
   end
-  def pay_off
+  def pay_off?
   	user.admin?		
   end	
   class Scope < Scope
